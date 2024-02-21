@@ -1,0 +1,50 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="IWD celebra los logros femeninos y promueve la igualdad de género. Este año, bajo el tema 'Impactar el futuro', impulsamos a mujeres en tecnología a liderar cambios."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo-iwd-2024.svg?v=1.0.1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="IWD celebra los logros femeninos y promueve la igualdad de género. Este año, bajo el tema 'Impactar el futuro', impulsamos a mujeres en tecnología a liderar cambios"
+    />
+    <meta name="keywords" content="GDG, WTM, Cochabamba, IWD, Impactar el futuro" />
+    <meta name="og:title" content="IWD Cochabamba 2024" />
+    <meta name="og:image" content="/logo-iwd-2024.jpg" />
+    <meta name="og:site_name" content="IWD Cochabamba 2024" />
+    <meta
+      name="og:description"
+      content="IWD celebra los logros femeninos y promueve la igualdad de género. Este año, bajo el tema 'Impactar el futuro', impulsamos a mujeres en tecnología a liderar cambios"
+    />
+  </head>
+  <body>
+    <slot />
+    <GoogleAnalytics />
+
+    <style is:global>
+      @font-face {
+        font-family: "Product Sans";
+        src: url("../assets/fonts/ProductSans-Regular.ttf") format("truetype");
+      }
+
+      body {
+        font-family: "Product Sans", sans-serif;
+      }
+    </style>
+  </body>
+</html>
