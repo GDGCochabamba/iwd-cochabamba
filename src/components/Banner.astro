@@ -1,0 +1,51 @@
+<article>
+  <section
+    class="banner aspect-ratio-13/5 relative mt-10 flex w-full bg-contain bg-center bg-no-repeat md:mt-8 lg:mt-4 xl:mt-0"
+  >
+  </section>
+  <div class="event-info md:-mt-6 lg:-mt-12">
+    <div class="container mx-auto p-4">
+      <div class="-mx-2 flex flex-wrap">
+        <div class="w-full px-2 md:w-2/3 lg:w-1/2">
+          <div class="text-center md:text-left">
+            <h2
+              class="mb-1 text-xl font-extrabold text-blue-600 sm:mb-3 sm:text-2xl"
+            >
+              ¿Cuándo y dónde será?
+            </h2>
+            <p class="text-xl font-semibold">06 de Abril</p>
+            <span class="sm:text-lg"
+              >Universidad Simón I. Patiño - Cochabamba, Bolivia</span
+            >
+          </div>
+        </div>
+        <div
+          class="mt-4 flex w-full items-center justify-center px-2 md:mt-0 md:w-1/3 lg:w-1/2"
+        >
+          <!-- <a href="#" class="inline-block w-full lg:w-1/2 bg-blue-500 hover:bg-blue-700 text-white font-bold uppercase py-2 px-4 text-center rounded-lg">
+              Inscríbete
+            </a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<style>
+  .banner {
+    background-image: url("../assets/images/banner-mobile.png");
+    aspect-ratio: 13/5;
+    position: relative;
+    z-index: -2;
+  }
+
+  @media (min-width: 768px) {
+    .banner {
+      background-image: url("../assets/images/banner.png");
+    }
+  }
+
+  .event-info {
+    background-color: #d1ece3;
+  }
+</style>
