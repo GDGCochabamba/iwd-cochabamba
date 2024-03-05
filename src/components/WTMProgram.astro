@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+import audio from "../assets/images/audio.png";
+import laptop from "../assets/images/laptop.png";
+import phone from "../assets/images/phone.png";
+import paper from "../assets/images/paper.png";
+---
+
+<article>
+  <div class="event-info md:-mt-6 lg:-mt-12">
+    <div class="image-group">
+      <div class="image-pair">
+        <Image
+          class="h-auto w-full md:w-5/6 xl:w-3/5 mx-auto rounded-lg"
+          src={audio}
+          alt=""
+        />
+        <Image
+          class="h-auto w-full md:w-5/6 xl:w-3/5 mx-auto rounded-lg"
+          src={laptop}
+          alt=""
+        />
+      </div>
+      <div class="image-pair">
+        <Image
+          class="h-auto w-full md:w-5/6 xl:w-3/5 mx-auto rounded-lg"
+          src={phone}
+          alt=""
+        />
+        <Image
+          class="h-auto w-full md:w-5/6 xl:w-3/5 mx-auto rounded-lg"
+          src={paper}
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="container mx-auto p-4">
+      <div class="-mx-2 flex flex-wrap">
+        <div class="w-full px-2 md:w-2/3 lg:w-1/2">
+          <div class="text-right md:text-left">
+            <h2
+              class="mb-1 text-xl font-bold text-black-600 sm:mb-3 sm:text-2xl"
+            >
+              Programa 
+              WTM Ambassadors
+            </h2>
+            <p>
+              El programa Women Techmakers de Google brinda 
+              visibilidad, comunidad y recursos para mujeres en la 
+              tecnología. Empodera a las mujeres en sus carreras al 
+              brindarles acceso a recursos y eventos seleccionados, así 
+              como a información y herramientas de Google.
+            </p>
+            <button class="btn">APLICA AL PROGRAMA</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<style>
+  .image-group {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; /* Relleno del botón */
+  } 
+  .image-pair {
+    display: flex;
+    flex-direction: column;
+    width: 45%; /* Ajusta el ancho según tus necesidades */
+  }
+  .event-info {
+    background-color: #d1ece3;
+    display: flex;
+    
+  }
+  .btn{
+    background-color: #007bff;
+    color: #fff;     
+    padding: 10px 20px; /* Relleno del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px;
+    cursor: pointer;
+}
+</style>
