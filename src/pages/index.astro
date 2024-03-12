@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Menu from "../components/Menu.astro";
 import Banner from "../components/Banner.astro";
 import AboutIWD from "../components/AboutIWD.astro";
+import WTMProgram from "../components/WTMProgram.astro";
 ---
 
 <Layout title="IWD Cochabamba 2024">
@@ -10,7 +11,17 @@ import AboutIWD from "../components/AboutIWD.astro";
     <Menu />
     <Banner />
     <AboutIWD />
+    <WTMProgram />
   </main>
 </Layout>
 
-<style></style>
+<style>
+  @font-face {
+    font-family: "Google Sans";
+    src: url("../assets/fonts/GoogleSansDisplay-Regular.ttf") format("truetype");
+  }
+
+  body {
+    font-family: "Google Sans", sans-serif;
+  }
+</style>
