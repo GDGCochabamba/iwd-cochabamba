@@ -3,25 +3,27 @@ import { Image } from "astro:assets";
 import previousEvent from "../assets/images/previous-event.jpeg";
 ---
 
-<div class="container mx-auto flex flex-wrap my-6 md:my-8 xl:my-10">
+<div class="container mx-auto my-6 flex flex-wrap md:my-8 xl:my-10">
   <div class="flex w-full flex-col justify-center p-4 md:w-1/2">
-    <h2 class="mb-4 text-2xl font-bold">¿Qué es IWD?</h2>
-    <p class="mb-4">
+    <h2 class="mb-4 text-left text-2xl font-medium md:text-3xl">
+      ¿Qué es IWD?
+    </h2>
+    <p class="text-md mb-4 md:text-lg">
       El Día Internacional de la Mujer se celebra anualmente en marzo como
       momento reconocido mundialmente para celebrar los logros de las mujeres y
       crear conciencia sobre las cuestiones que afectan la igualdad de género.
     </p>
-    <p>
+    <p class="text-md md:text-lg">
       El tema "Impactar el futuro" es un llamado a la acción para que las
       mujeres en la tecnología utilicen sus habilidades, creatividad y pasión
       para mejorar el futuro de la tecnología y la sociedad.
     </p>
   </div>
-  <div class="w-full p-4 md:w-1/2 flex items-center">
+  <div class="flex w-full items-center p-4 md:w-1/2">
     <Image
-          class="h-auto w-full md:w-5/6 xl:w-3/5 mx-auto rounded-lg"
-          src={previousEvent}
-          alt="Evento anterior de WTM Cochabamba"
-        />
+      class="mx-auto h-auto w-full rounded-lg md:w-5/6 xl:w-3/5"
+      src={previousEvent}
+      alt="Evento anterior de WTM Cochabamba"
+    />
   </div>
 </div>
