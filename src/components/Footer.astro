@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import logoInstagram from "../assets/images/logo-instagram.svg";
+import logoFacebook from "../assets/images/logo-facebook.svg";
+---
+
+<div class="footer">
+  <div class="container mx-auto p-10">
+    <div class="text-center">
+      <h2 class="text-2xl font-medium md:text-3xl">
+        Síguenos en nuestras redes sociales
+      </h2>
+      <p class="text-md mt-2 md:text-lg">
+        No te pierdas las últimas noticias y actualizaciones.
+      </p>
+      <div class="mt-4 flex justify-center">
+        <a
+          href="https://www.facebook.com/wtmcochabamba"
+          class="mr-2 flex items-center space-x-1 md:mr-4"
+          target="_blank"
+          rel="noopener"
+        >
+          <Image
+            class="h-8 w-8 md:h-10 md:w-10"
+            src={logoFacebook}
+            alt="WTM Cochabamba en Facebook"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/wtmcochabamba"
+          class="ml-2 flex items-center space-x-1 md:ml-4"
+          target="_blank"
+          rel="noopener"
+        >
+          <Image
+            class="h-8 w-8 md:h-10 md:w-10"
+            src={logoInstagram}
+            alt="WTM Cochabamba en Instagram"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .footer {
+    background-color: #c1e4fd;
+  }
+</style>
