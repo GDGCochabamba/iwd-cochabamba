@@ -31,7 +31,7 @@ export const organizers = [
   {
     img: CarlaFlorida,
     name: 'Carla Marcela Florida Román',
-    bio: 'Head of Artificial Intelligence at Dapta, AI Engineer, Platzi Professor, CEO Menti Academy, Microsoft Learn Student Ambassador.',
+    bio: 'Head of Artificial Intelligence at Dapta, AI Engineer, Platzi Professor, CEO Menti Academy, creadora de contenido en carli.code',
     social: [
       {
         social_img: logoLinkedin,
