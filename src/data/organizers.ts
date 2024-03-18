@@ -183,7 +183,7 @@ export const organizers = [
   {
     img: PaolaMedrano,
     name: 'Paola Medrano',
-    bio: 'Ingeniera de Sistemas. Actualmente trabaja en Jalasoft como desarrolladora de software con el rol de Lead técnico en el área de Frontend. Co-Founder de GP4Tech, Organizer WGJ (Women Game Jam) Bolivia, Trainer de Frontend en JalaUniversity',
+    bio: 'Ingenieria en redes y telecomunicaciones con experiencia en diseño e implementacion de redes GPON que actualmente trabaja como soporte TI y ciberseguridad. Cuenta con diferentes certificaciones como CCST, CC, NSE1, NSE2, NSE3.',
     social: [
       {
         social_img: logoLinkedin,
@@ -198,7 +198,7 @@ export const organizers = [
   {
     img: VaniaCatorceno,
     name: 'Vania Marisela Catorceno Carballo',
-    bio: 'Ingenieria en redes y telecomunicaciones con experiencia en diseño e implementacion de redes GPON que actualmente trabaja como soporte TI y ciberseguridad. Cuenta con diferentes certificaciones como CCST, CC, NSE1, NSE2, NSE3.',
+    bio: 'Ingeniera de Sistemas. Actualmente trabaja en Jalasoft como desarrolladora de software con el rol de Lead técnico en el área de Frontend. Co-Founder de GP4Tech, Organizer WGJ (Women Game Jam) Bolivia, Trainer de Frontend en JalaUniversity',
     social: [
       {
         social_img: logoFacebook,
