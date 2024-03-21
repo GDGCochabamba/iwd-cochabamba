@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+import Ada from "../assets/images/community organizers/ada.png";
+import GDGCocha from "../assets/images/community organizers/gdg-cocha.png";
+import MujeresTics from "../assets/images/community organizers/mujeres-tics.png";
+import Notion from "../assets/images/community organizers/notion.png";
+import Pyladies from "../assets/images/community organizers/pyladies.png";
+import WtmCocha from "../assets/images/community organizers/wtm-cocha.png";
+import GEGCocha from "../assets/images/community organizers/GEG-cocha.png";
+import AngularBolivia from "../assets/images/community organizers/angular-bolivia.png";
+---
+
+<section class="py-20 px-6 md:px-10">
+  <h2 class="text-center text-3xl font-medium leading-normal text-[black]">
+    Comunidades Organizadoras
+  </h2>
+  <p class="text-center font-light">
+    Descubre todas las comunidades que forman parte de la organización del evento
+  </p>
+  <div class="mt-16 flex flex-col sm:flex-row items-center justify-around gap-5">
+    <a href="https://www.facebook.com/adaindatabo" target="_blank" rel="noopener">
+      <Image
+        src={Ada}
+        alt="Ada In Data Logo"
+        loading="lazy"
+        class="mb-5 w-20"
+      />
+    </a>
+    <a href="https://www.facebook.com/GDGCochabamba " target="_blank" rel="noopener">
+      <Image
+        src={GDGCocha}
+        alt="GDG Cochabamba logo"
+        loading="lazy"
+        class="mb-5 w-28 sm:w-40"
+      />
+    </a>
+    <a href="https://www.facebook.com/MujeresTICsBO" target="_blank" rel="noopener">
+      <Image
+        src={MujeresTics}
+        alt="Mujeres Tics logo"
+        loading="lazy"
+        class="mb-5 w-24"
+      />
+    </a>
+    <a href="https://www.facebook.com/notionbolivia" target="_blank" rel="noopener">
+      <Image
+        src={Notion}
+        alt="Notion logo"
+        loading="lazy"
+        class="mb-5 w-24"
+      />
+    </a>
+    <a href="https://www.facebook.com/pyladiescbba" target="_blank" rel="noopener">
+      <Image
+        src={Pyladies}
+        alt="Pyladies logo"
+        loading="lazy"
+        class="mb-5 w-24"
+      />
+    </a>
+    <a href="https://www.facebook.com/wtmcochabamba?mibextid=ZbWKwL" target="_blank" rel="noopener">
+      <Image
+        src={WtmCocha}
+        alt="Wtm logo"
+        loading="lazy"
+        class="mb-5 w-24"
+      />
+    </a>
+    <a href="https://www.facebook.com/groups/gegbolivia/?ref=share&mibextid=NSMWBT" target="_blank" rel="noopener">
+      <Image
+        src={GEGCocha}
+        alt="GEG logo"
+        loading="lazy"
+        class="mb-5 w-24"
+      />
+    </a>
+    <a href="https://www.facebook.com/angularBolivia?mibextid=ZbWKwL" target="_blank" rel="noopener">
+      <Image
+        src={AngularBolivia}
+        alt="Angular Bolivia logo"
+        loading="lazy"
+        class="mb-5 w-24"
+      />
+    </a>
+  </div>
+</section>
