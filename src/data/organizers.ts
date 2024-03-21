@@ -19,203 +19,203 @@ import logoYoutube from "../assets/images/social/youtube.svg";
 export const organizers = [
   {
     img: AlisonOrellana,
-    name: 'Alison Orellana Rios',
-    bio: 'Software Development Engineer, Msc. Ing. Informática, PyLadies Cochabamba Organizer, Women Techmakers Ambassador.',
+    name: "Alison Orellana Rios",
+    bio: "Software Development Engineer, Msc. Ing. Informática, PyLadies Cochabamba Organizer, Women Techmakers Ambassador.",
     social: [
       {
         social_img: logoWeb,
-        src: 'https://linktr.ee/AllyOR'
-      }
-    ]
+        src: "https://linktr.ee/AllyOR",
+      },
+    ],
   },
   {
     img: CarlaFlorida,
-    name: 'Carla Marcela Florida Román',
-    bio: 'Head of Artificial Intelligence at Dapta, AI Engineer, Platzi Professor, CEO Menti Academy, creadora de contenido en carli.code',
+    name: "Carla Marcela Florida Román",
+    bio: "Head of Artificial Intelligence at Dapta, AI Engineer, Platzi Professor, CEO Menti Academy, creadora de contenido en carli.code",
     social: [
       {
         social_img: logoLinkedin,
-        src: 'https://www.linkedin.com/in/carlamfr'
-      }
-    ]
+        src: "https://www.linkedin.com/in/carlamfr",
+      },
+    ],
   },
   {
     img: IvySejas,
-    name: 'Ivy Saskia Sejas Rocabado',
-    bio: 'Fundadora de NotionIS, desarrolladora de Software con especialización en el desarrollo de software utilizando JavaScript para el frontend y backend.',
+    name: "Ivy Saskia Sejas Rocabado",
+    bio: "Fundadora de NotionIS, desarrolladora de Software con especialización en el desarrollo de software utilizando JavaScript para el frontend y backend.",
     social: [
       {
         social_img: logoFacebook,
-        src: 'https://www.facebook.com/ivy.s.rocabado/'
+        src: "https://www.facebook.com/ivy.s.rocabado/",
       },
       {
         social_img: logoInstagram,
-        src: 'https://www.instagram.com/ivy_saskia/'
+        src: "https://www.instagram.com/ivy_saskia/",
       },
       {
         social_img: logoTwitter,
-        src: 'https://twitter.com/IvySaskia'
+        src: "https://twitter.com/IvySaskia",
       },
       {
         social_img: logoLinkedin,
-        src: 'https://www.linkedin.com/in/carlamfr'
-      }
-    ]
+        src: "https://www.linkedin.com/in/carlamfr",
+      },
+    ],
   },
   {
     img: JacqueMejia,
-    name: 'Jacqueline Susan Mejía',
-    bio: 'Ing. de Sistemas e Ing. Informática, Women Techmaker Ambassador, co-fundadora de Pyxtalks. Actualmente trabaja como Data Analyst en PyxJam,',
+    name: "Jacqueline Susan Mejía",
+    bio: "Ing. de Sistemas e Ing. Informática, Women Techmaker Ambassador, co-fundadora de Pyxtalks. Actualmente trabaja como Data Analyst en PyxJam,",
     social: [
       {
         social_img: logoFacebook,
-        src: 'https://www.facebook.com/susyjam'
+        src: "https://www.facebook.com/susyjam",
       },
       {
         social_img: logoInstagram,
-        src: 'https://www.instagram.com/susy.jam'
+        src: "https://www.instagram.com/susy.jam",
       },
       {
         social_img: logoLinkedin,
-        src: 'https://www.linkedin.com/in/susyjam'
-      }
-    ]
+        src: "https://www.linkedin.com/in/susyjam",
+      },
+    ],
   },
   {
     img: JasielRenteria,
-    name: 'Jessica Jasiel Renteria Escalera',
-    bio: 'Lead Organizer de PyLadies Cochabamba, Women TechMaker Ambassador y Microsoft Learn Student Ambassador.',
+    name: "Jessica Jasiel Renteria Escalera",
+    bio: "Lead Organizer de PyLadies Cochabamba, Women TechMaker Ambassador y Microsoft Learn Student Ambassador.",
     social: [
       {
         social_img: logoFacebook,
-        src: 'https://www.facebook.com/Jasiel.Renteria.17'
+        src: "https://www.facebook.com/Jasiel.Renteria.17",
       },
       {
         social_img: logoInstagram,
-        src: 'https://instagram.com/jasiel_renteria'
+        src: "https://instagram.com/jasiel_renteria",
       },
       {
         social_img: logoTwitter,
-        src: 'https://twitter.com/Jasiel_Renteria'
+        src: "https://twitter.com/Jasiel_Renteria",
       },
       {
         social_img: logoLinkedin,
-        src: 'https://www.linkedin.com/in/jasiel-renteria/ '
-      }
-    ]
+        src: "https://www.linkedin.com/in/jasiel-renteria/ ",
+      },
+    ],
   },
   {
     img: KarenLara,
-    name: 'Karen Lara',
-    bio: 'Scrum Master, Directora Nacional y Co Fundadora de Mujeres TICs Bolivia, Women Techmakers Ambassador & WEDO Bolivia',
+    name: "Karen Lara",
+    bio: "Scrum Master, Directora Nacional y Co Fundadora de Mujeres TICs Bolivia, Women Techmakers Ambassador & WEDO Bolivia",
     social: [
       {
         social_img: logoFacebook,
-        src: 'https://www.facebook.com/karenlaraferrufino'
+        src: "https://www.facebook.com/karenlaraferrufino",
       },
       {
         social_img: logoInstagram,
-        src: 'https://instagram.com/karenlaraferrufino'
+        src: "https://instagram.com/karenlaraferrufino",
       },
       {
         social_img: logoLinkedin,
-        src: 'https://www.linkedin.com/in/karen-lara-ferrufino-19bba4158'
-      }
-    ]
+        src: "https://www.linkedin.com/in/karen-lara-ferrufino-19bba4158",
+      },
+    ],
   },
   {
     img: LauraRisueno,
-    name: 'Laura Veronica Risueño Arancibia',
-    bio: '+5 años de experiencia como ingeniera de software en diferentes empresas y actualmente trabaja en Assuresoft.',
+    name: "Laura Veronica Risueño Arancibia",
+    bio: "Cuenta con +5 años de experiencia como Ingeniera de Software, actualmente trabaja en Assuresoft. Es embajadora Women Techmakers, es parte de las comunidades GDG Cochabamba y Angular Bolivia",
     social: [
       {
         social_img: logoFacebook,
-        src: 'https://www.facebook.com/laurisuenoarancibia'
+        src: "https://www.facebook.com/laurisuenoarancibia",
       },
       {
         social_img: logoTwitter,
-        src: 'https://x.com/LauRisueno'
+        src: "https://x.com/LauRisueno",
       },
       {
         social_img: logoLinkedin,
-        src: 'https://www.linkedin.com/in/laurisueno'
-      }
-    ]
+        src: "https://www.linkedin.com/in/laurisueno",
+      },
+    ],
   },
   {
     img: MariaGarcia,
-    name: 'María Griselda Garcia Flores',
-    bio: 'Ingeniera, desarrolladora de software en Jalasoft, instructora en el bootcamp de Jala University, embajadora de Women Techmakers y organizadora lider de las comunidades GDG Cochabamba y Angular Bolivia.',
+    name: "María Griselda Garcia Flores",
+    bio: "Ingeniera, desarrolladora de software en Jalasoft, instructora en el bootcamp de Jala University, embajadora de Women Techmakers y organizadora lider de las comunidades GDG Cochabamba y Angular Bolivia.",
     social: [
       {
         social_img: logoFacebook,
-        src: 'https://www.facebook.com/combigriss/'
+        src: "https://www.facebook.com/combigriss/",
       },
       {
         social_img: logoInstagram,
-        src: 'https://www.instagram.com/combigriss/'
+        src: "https://www.instagram.com/combigriss/",
       },
       {
         social_img: logoLinkedin,
-        src: 'https://www.linkedin.com/in/combigriss/'
-      }
-    ]
+        src: "https://www.linkedin.com/in/combigriss/",
+      },
+    ],
   },
   {
     img: MelvyAncieta,
-    name: 'Melvy Rocío Ancieta Alvarado',
+    name: "Melvy Rocío Ancieta Alvarado",
     bio: 'Comunicadora y Diseñadora Gráfica, Actualmente lidera una comunidad denominada "Mujeres que Inspiran. Co- Fundadora de una Academía denominada TechKids,',
     social: [
       {
         social_img: logoFacebook,
-        src: 'https://www.facebook.com/melvyrocio.ancieta/'
+        src: "https://www.facebook.com/melvyrocio.ancieta/",
       },
       {
         social_img: logoInstagram,
-        src: 'https://www.instagram.com/melvyancieta/'
+        src: "https://www.instagram.com/melvyancieta/",
       },
       {
         social_img: logoLinkedin,
-        src: 'https://www.linkedin.com/in/melvydesign/'
-      }
-    ]
+        src: "https://www.linkedin.com/in/melvydesign/",
+      },
+    ],
   },
   {
     img: PaolaMedrano,
-    name: 'Paola Medrano',
-    bio: 'Ingenieria en redes y telecomunicaciones con experiencia en diseño e implementacion de redes GPON que actualmente trabaja como soporte TI y ciberseguridad. Cuenta con diferentes certificaciones como CCST, CC, NSE1, NSE2, NSE3.',
+    name: "Paola Medrano",
+    bio: "Ingenieria en redes y telecomunicaciones con experiencia en diseño e implementacion de redes GPON que actualmente trabaja como soporte TI y ciberseguridad. Cuenta con diferentes certificaciones como CCST, CC, NSE1, NSE2, NSE3.",
     social: [
       {
         social_img: logoLinkedin,
-        src: 'https://www.linkedin.com/in/paolamedrano/'
+        src: "https://www.linkedin.com/in/paolamedrano/",
       },
       {
         social_img: logoYoutube,
-        src: 'https://www.youtube.com/channel/UC_Zg3Kay3WkhT2llOxRUdPA/featured'
-      }
-    ]
+        src: "https://www.youtube.com/channel/UC_Zg3Kay3WkhT2llOxRUdPA/featured",
+      },
+    ],
   },
   {
     img: VaniaCatorceno,
-    name: 'Vania Marisela Catorceno Carballo',
-    bio: 'Ingeniera de Sistemas. Actualmente trabaja en Jalasoft como desarrolladora de software con el rol de Lead técnico en el área de Frontend. Co-Founder de GP4Tech, Organizer WGJ (Women Game Jam) Bolivia, Trainer de Frontend en JalaUniversity',
+    name: "Vania Marisela Catorceno Carballo",
+    bio: "Ingeniera de Sistemas. Actualmente trabaja en Jalasoft como desarrolladora de software con el rol de Lead técnico en el área de Frontend. Co-Founder de GP4Tech, Organizer WGJ (Women Game Jam) Bolivia, Trainer de Frontend en JalaUniversity",
     social: [
       {
         social_img: logoFacebook,
-        src: 'https://www.facebook.com/vania.catorceno'
+        src: "https://www.facebook.com/vania.catorceno",
       },
       {
         social_img: logoInstagram,
-        src: 'https://www.instagram.com/vanicatorceno?igsh=cjZjaHg2Y2JweWlm'
+        src: "https://www.instagram.com/vanicatorceno?igsh=cjZjaHg2Y2JweWlm",
       },
       {
         social_img: logoTwitter,
-        src: 'https://twitter.com/VaniCatorceno'
+        src: "https://twitter.com/VaniCatorceno",
       },
       {
         social_img: logoLinkedin,
-        src: 'https://www.linkedin.com/in/vania-marisela-catorceno-carballo-79078a10a/'
-      }
-    ]
-  }
-]
+        src: "https://www.linkedin.com/in/vania-marisela-catorceno-carballo-79078a10a/",
+      },
+    ],
+  },
+];
