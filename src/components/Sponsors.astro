@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import Usip from "../assets/images/sponsors/usip.png";
-import Michicosmico from "../assets/images/sponsors/michisomico.png";
+import Usip from '../assets/images/sponsors/usip.png';
+import Michicosmico from '../assets/images/sponsors/michicosmico.png';
 ---
 
 <section class="px-6 py-20 md:px-10">
@@ -11,8 +11,11 @@ import Michicosmico from "../assets/images/sponsors/michisomico.png";
   <p class="text-center font-light">
     Conoce a las empresas que apoyan el evento.
   </p>
-  <div
+  <!-- <div
     class="mt-14 grid grid-cols-2 items-center justify-around gap-5 sm:grid-cols-3 lg:grid-cols-8"
+  > -->
+  <div
+    class="mt-14 flex justify-center items-center gap-5"
   >
     <a
       href="https://usip.edu.bo/"
@@ -23,7 +26,7 @@ import Michicosmico from "../assets/images/sponsors/michisomico.png";
         src={Usip}
         alt="USIP logo"
         loading="lazy"
-        class="m-auto mb-5 w-20"
+        class="m-auto mb-5 w-40"
       />
     </a>
     <a
@@ -35,7 +38,7 @@ import Michicosmico from "../assets/images/sponsors/michisomico.png";
         src={Michicosmico}
         alt="Michicosmico logo"
         loading="lazy"
-        class="m-auto mb-5 w-24"
+        class="m-auto mb-5 w-40"
       />
     </a>
   </div>
