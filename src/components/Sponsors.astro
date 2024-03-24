@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import Usip from "../assets/images/sponsors/usip.png";
+import Michicosmico from "../assets/images/sponsors/michisomico.png";
+---
+
+<section class="px-6 py-20 md:px-10">
+  <h2 class="text-center text-3xl font-medium leading-normal text-[black]">
+    Nuestos Auspiciadores
+  </h2>
+  <p class="text-center font-light">
+    Conoce a las empresas que apoyan el evento.
+  </p>
+  <div
+    class="mt-14 grid grid-cols-2 items-center justify-around gap-5 sm:grid-cols-3 lg:grid-cols-8"
+  >
+    <a
+      href="https://usip.edu.bo/"
+      target="_blank"
+      rel="noopener"
+    >
+      <Image
+        src={Usip}
+        alt="USIP logo"
+        loading="lazy"
+        class="m-auto mb-5 w-20"
+      />
+    </a>
+    <a
+      href="https://www.facebook.com/profile.php?id=61555614981317"
+      target="_blank"
+      rel="noopener"
+    >
+      <Image
+        src={Michicosmico}
+        alt="Michicosmico logo"
+        loading="lazy"
+        class="m-auto mb-5 w-24"
+      />
+    </a>
+  </div>
+</section>
