@@ -6,6 +6,7 @@ import JasielRenteria from "../assets/images/organizers/jasiel-renteria.png";
 import KarenLara from "../assets/images/organizers/karen-lara.png";
 import LauraRisueno from "../assets/images/organizers/laura-risueno.png";
 import MariaGarcia from "../assets/images/organizers/maria-garcia.png";
+import MariaTorrez from "../assets/images/organizers/maria-torrez.jpeg";
 import MelvyAncieta from "../assets/images/organizers/melvy-ancieta.png";
 import PaolaMedrano from "../assets/images/organizers/paola-medrano.png";
 import VaniaCatorceno from "../assets/images/organizers/vania-catorceno.png";
@@ -158,6 +159,25 @@ export const organizers = [
       {
         social_img: logoLinkedin,
         src: "https://www.linkedin.com/in/combigriss/",
+      },
+    ],
+  },
+  {
+    img: MariaTorrez,
+    name: "Maria Rene Torrez Vargas",
+    bio: "Ella es educadora en Tecnologias, Programación y Robótica, actulamente docente de K12 en Hughes Schools, universidad y Parte de Transformación Digital de TECBA. Forma parte de los Lideres de GEG Cochabamba",
+    social: [
+      {
+        social_img: logoFacebook,
+        src: "https://www.facebook.com/solorene",
+      },
+      {
+        social_img: logoInstagram,
+        src: "https://www.instagram.com/solorenebol",
+      },
+      {
+        social_img: logoLinkedin,
+        src: "https://www.linkedin.com/in/solorene",
       },
     ],
   },
