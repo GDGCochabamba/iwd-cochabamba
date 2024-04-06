@@ -21,6 +21,7 @@
         </div>
         <div
           class="mt-4 flex w-full items-center justify-center px-2 md:mt-0 md:w-1/3 lg:w-1/2"
+          id="registerButtonContainer"
         >
           <a
             href="https://forms.gle/vrsexu6yS8jKG41m9"
@@ -54,3 +55,13 @@
     background-color: #d1ece3;
   }
 </style>
+
+<script>
+  var registerButtonContainer = document.getElementById('registerButtonContainer');
+
+  var showRegisterButton = false; 
+
+  if (!showRegisterButton && registerButtonContainer !== null) {
+    registerButtonContainer.style.display = 'none'; 
+  }
+</script>
