@@ -10,6 +10,9 @@ import Communities from "../components/Communities.astro";
 import WTMAmbassadors from "../components/WTMAmbassadors.astro";
 import Speakers from "../components/Speakers.astro";
 import Sponsors from "../components/Sponsors.astro";
+const showSpeakers = false;
+const showAmbassadors= false;
+const showSponsors = false;
 ---
 
 <Layout title="IWD Cochabamba 2024">
@@ -18,11 +21,11 @@ import Sponsors from "../components/Sponsors.astro";
     <Banner />
     <AboutIWD />
     <WTMProgram />
-    <WTMAmbassadors />
+    {showAmbassadors && <WTMAmbassadors />}
     <GDGProgram />
-    <Speakers/>
+    {showSpeakers && <Speakers />}
     <Communities />
-    <Sponsors/>
+    {showSponsors && <Sponsors />}
     <Footer />
   </main>
 </Layout>
