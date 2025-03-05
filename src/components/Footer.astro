@@ -2,6 +2,9 @@
 import { Image } from "astro:assets";
 import logoInstagram from "../assets/images/logo-instagram.svg";
 import logoFacebook from "../assets/images/logo-facebook.svg";
+import logoLinkedin from "../assets/images/logo-linkedin.svg";
+import logotiktok from "../assets/images/logo-tiktok.svg";
+
 ---
 
 <div class="footer">
@@ -36,6 +39,30 @@ import logoFacebook from "../assets/images/logo-facebook.svg";
             class="h-8 w-8 md:h-10 md:w-10"
             src={logoInstagram}
             alt="WTM Cochabamba en Instagram"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/gdg-cochabamba"
+          class="ml-2 flex items-center space-x-1 md:ml-4"
+          target="_blank"
+          rel="noopener"
+        >
+          <Image
+            class="h-8 w-8 md:h-10 md:w-10"
+            src={logoLinkedin}
+            alt="GDG Cochabamba en Linkedin"
+          />
+        </a>
+        <a
+          href="https://www.tiktok.com/@gdg.cochabamba"
+          class="ml-2 flex items-center space-x-1 md:ml-4"
+          target="_blank"
+          rel="noopener"
+        >
+          <Image
+            class="h-8 w-8 md:h-10 md:w-10"
+            src={logotiktok}
+            alt="GDG Cochabamba en TikTok"
           />
         </a>
       </div>
