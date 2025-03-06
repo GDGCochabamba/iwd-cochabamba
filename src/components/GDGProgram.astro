@@ -9,104 +9,145 @@ import logotiktok from "../assets/images/logo-tiktok.svg";
 ---
 
 <div
-  class="flex w-full flex-col items-center justify-start bg-[#f9f9f9] px-6 py-[120px]"
+  class="flex flex-shrink-0 flex-grow-0 flex-col items-center justify-center gap-10 self-stretch bg-[#f9f9f9] px-6 py-[120px]"
 >
-  <div
-    class="flex w-[1024px] flex-shrink-0 flex-grow-0 flex-col items-center justify-center gap-10"
-  >
-    <div
-      class="flex flex-shrink-0 flex-grow-0 items-start justify-center gap-8 self-stretch"
-    >
-      <div class="flex flex-grow flex-col items-center justify-start gap-12">
-        <div
-          class="relative flex flex-shrink-0 flex-grow-0 items-start justify-center gap-12 self-stretch"
+  <div class="internal-container">
+    <div class="container-image-gdg">
+      <Image src={gdgImage} alt="gdgImage" class="image-gdg" />
+    </div>
+    <div class="container-info-gdg">
+      <Image
+        src={gdgLogo}
+        alt="GDG Cochabamba"
+        class="h-[34px] w-[400px] flex-shrink-0 flex-grow-0 object-contain"
+      />
+      <p class="text-info-gdg text-[22px] text-[#4c555b]">
+        <span class="text-info-gdg text-[22px] text-[#4c555b]">
+          La comunidad
+        </span>
+        <span class="text-info-gdg text-[22px] font-bold text-[#4c555b]">
+          Google Developer Group Cochabamba
+        </span>
+        <span class="text-info-gdg text-[22px] text-[#4c555b]">
+          te da la oportunidad de aprender nuevas habilidades en una variedad de
+          formatos. También conocerás a desarrolladores locales de forma virtual
+          o en persona con intereses similares en tecnología.
+        </span>
+        <br />
+      </p>
+      <div
+        class="relative flex flex-shrink-0 flex-grow-0 items-center justify-start gap-10 self-stretch"
+      >
+        <a
+          href="https://www.facebook.com/wtmcochabamba"
+          class="relative h-10 w-10 flex-shrink-0 flex-grow-0"
+          target="_blank"
+          rel="noopener"
         >
           <Image
-            src={gdgImage}
-            alt="gdgImage"
-            class="h-[379px] w-[512px] flex-shrink-0 flex-grow-0 rounded-2xl object-cover"
+            class="h-8 w-8 md:h-10 md:w-10"
+            src={logoFacebook}
+            alt="WTM Cochabamba en Facebook"
           />
-          <div
-            class="relative flex flex-grow flex-col items-start justify-start gap-6"
-          >
-            <Image
-              src={gdgLogo}
-              alt="GDG Cochabamba"
-              class="h-[34px] w-[400px] flex-shrink-0 flex-grow-0 object-contain"
-            />
-            <p
-              class="w-[464px] flex-shrink-0 flex-grow-0 self-stretch text-left text-[22px] text-[#4c555b]"
-            >
-              <span
-                class="w-[464px] flex-shrink-0 flex-grow-0 self-stretch text-left text-[22px] text-[#4c555b]"
-                >La comunidad
-              </span><span
-                class="w-[464px] flex-shrink-0 flex-grow-0 self-stretch text-left text-[22px] font-bold text-[#4c555b]"
-                >Google Developer Group Cochabamba</span
-              ><span
-                class="w-[464px] flex-shrink-0 flex-grow-0 self-stretch text-left text-[22px] text-[#4c555b]"
-              >
-                te da la oportunidad de aprender nuevas habilidades en una
-                variedad de formatos. También conocerás a desarrolladores
-                locales de forma virtual o en persona con intereses similares en
-                tecnología.
-              </span><br />
-            </p>
-            <div
-              class="relative flex flex-shrink-0 flex-grow-0 items-center justify-start gap-10 self-stretch"
-            >
-              <a
-                href="https://www.facebook.com/wtmcochabamba"
-                class="flex-grow-0 flex-shrink-0 w-10 h-10 relative"
-                target="_blank"
-                rel="noopener"
-              >
-                <Image
-                  class="h-8 w-8 md:h-10 md:w-10"
-                  src={logoFacebook}
-                  alt="WTM Cochabamba en Facebook"
-                />
-              </a>
-              <a
-                href="https://www.instagram.com/wtmcochabamba"
-                class="flex-grow-0 flex-shrink-0 w-10 h-10 relative"
-                target="_blank"
-                rel="noopener"
-              >
-                <Image
-                  class="h-8 w-8 md:h-10 md:w-10"
-                  src={logoInstagram}
-                  alt="WTM Cochabamba en Instagram"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/gdg-cochabamba"
-                class="flex-grow-0 flex-shrink-0 w-10 h-10 relative"
-                target="_blank"
-                rel="noopener"
-              >
-                <Image
-                  class="h-8 w-8 md:h-10 md:w-10"
-                  src={logoLinkedin}
-                  alt="GDG Cochabamba en Linkedin"
-                />
-              </a>
-              <a
-                href="https://www.tiktok.com/@gdg.cochabamba"
-                class="flex-grow-0 flex-shrink-0 w-10 h-10 relative"
-                target="_blank"
-                rel="noopener"
-              >
-                <Image
-                  class="h-8 w-8 md:h-10 md:w-10"
-                  src={logotiktok}
-                  alt="GDG Cochabamba en TikTok"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
+        </a>
+        <a
+          href="https://www.instagram.com/wtmcochabamba"
+          class="relative h-10 w-10 flex-shrink-0 flex-grow-0"
+          target="_blank"
+          rel="noopener"
+        >
+          <Image
+            class="h-8 w-8 md:h-10 md:w-10"
+            src={logoInstagram}
+            alt="WTM Cochabamba en Instagram"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/gdg-cochabamba"
+          class="relative h-10 w-10 flex-shrink-0 flex-grow-0"
+          target="_blank"
+          rel="noopener"
+        >
+          <Image
+            class="social-networks-gdg"
+            src={logoLinkedin}
+            alt="GDG Cochabamba en Linkedin"
+          />
+        </a>
+        <a
+          href="https://www.tiktok.com/@gdg.cochabamba"
+          class="relative h-10 w-10 flex-shrink-0 flex-grow-0"
+          target="_blank"
+          rel="noopener"
+        >
+          <Image
+            class="h-8 w-8 md:h-10 md:w-10"
+            src={logotiktok}
+            alt="GDG Cochabamba en TikTok"
+          />
+        </a>
       </div>
     </div>
   </div>
 </div>
+<style>
+  .internal-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .container-image-gdg {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: flex-end;
+    align-self: flex-end;
+  }
+  .image-gdg {
+    width: 75%;
+    height: 100%;
+  }
+  .container-info-gdg {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+  .text-info-gdg {
+    width: 70%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    align-self: stretch;
+    text-align: left;
+  }
+  @media (max-width: 1200px) {
+    .image-gdg {
+      width: 100%;
+    }
+  }
+  @media (max-width: 1024px) {
+    .internal-container {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .container-image-gdg {
+      width: 90%;
+      align-items: center;
+      align-content: center;
+      align-self: center;
+    }
+    .image-gdg {
+      width: 100%;
+    }
+    .text-info-gdg {
+      width: 100%;
+    }
+  }
+</style>

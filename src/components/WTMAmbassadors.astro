@@ -6,75 +6,123 @@ import laptop from "../assets/images/laptop.png";
 import papelLapiz from "../assets/images/papel-lapiz.png";
 ---
 
-<div
-  class="flex w-full flex-shrink-0 flex-grow-0 flex-col items-center justify-start gap-2.5 bg-[#d1ece3] py-[120px]"
->
-  <div
-    class="relative flex w-[1024px] flex-shrink-0 flex-grow-0 items-center justify-start gap-6"
-  >
-    <div class="flex-grow self-stretch">
-      <Image
-        src={megafono}
-        alt="Megafono"
-        class="absolute left-[-0.5px] top-[-0.5px] h-[171px] w-[250px] object-contain"
-      /><Image
-        src={telefono}
-        alt="Telefono"
-        class="absolute left-[249.5px] top-[-0.5px] h-[171px] w-[250px] object-contain"
-      /><Image
-        src={laptop}
-        alt="Laptop"
-        class="absolute left-[249.5px] top-[170.5px] h-[171px] w-[250px] object-contain"
-      /><Image
-        src={papelLapiz}
-        alt="Papel Lapiz"
-        class="absolute left-[-0.5px] top-[170.5px] h-[171px] w-[250px] object-contain"
-      />
+<div class="container-ambassadors">
+  <div class="internal-container">
+    <div class="container-images">
+      <Image src={megafono} alt="Megafono" class="image-ambassadors" />
+      <Image src={telefono} alt="Telefono" class="image-ambassadors" />
+      <Image src={laptop} alt="Laptop" class="image-ambassadors" />
+      <Image src={papelLapiz} alt="Papel Lapiz" class="image-ambassadors" />
     </div>
-    <div class="h-[342px] flex-grow">
+    <div class="container-info-ambassadors">
+      <div>
+        <p class="text-title-container">
+          <span class="text-title-container">Programa</span>
+          <br />
+          <span class="text-title-container">WTM Ambassadors</span>
+        </p>
+        <p class="text-detail-container">
+          El programa Women Techmakers de Google brinda visibilidad, comunidad y
+          recursos para mujeres en la tecnología. Empodera a las mujeres en sus
+          carreras al brindarles acceso a recursos y eventos seleccionados, así
+          como a información y herramientas de Google.
+        </p>
+      </div>
       <div
-        class="absolute left-[524px] top-0 flex w-[500px] flex-col items-start justify-start gap-4"
+        class="relative flex h-12 flex-shrink-0 flex-grow-0 items-center justify-center gap-2.5 self-stretch rounded-[11px] bg-[#0f7c67] px-4 py-[11px]"
       >
-        <div
-          class="flex flex-shrink-0 flex-grow-0 flex-col items-start justify-start gap-6 self-stretch"
+        <a
+          href="https://developers.google.com/womentechmakers/ambassadors"
+          class="w-[468px] flex-grow text-center text-base font-bold uppercase text-[#fefefe]"
+          target="_blank"
+          rel="noopener"
         >
-          <div
-            class="relative flex flex-shrink-0 flex-grow-0 flex-col items-start justify-start self-stretch"
-          >
-            <p
-              class="w-[500px] flex-shrink-0 flex-grow-0 self-stretch text-left text-[40px] text-[#29292d]"
-            >
-              <span
-                class="w-[500px] flex-shrink-0 flex-grow-0 self-stretch text-left text-[40px] text-[#29292d]"
-                >Programa
-              </span><br /><span
-                class="w-[500px] flex-shrink-0 flex-grow-0 self-stretch text-left text-[40px] text-[#29292d]"
-                >WTM Ambassadors</span
-              >
-            </p>
-            <p
-              class="w-[500px] flex-shrink-0 flex-grow-0 self-stretch text-left text-[22px] text-[#4c555b]"
-            >
-              El programa Women Techmakers de Google brinda visibilidad,
-              comunidad y recursos para mujeres en la tecnología. Empodera a las
-              mujeres en sus carreras al brindarles acceso a recursos y eventos
-              seleccionados, así como a información y herramientas de Google.
-            </p>
-          </div>
-          <div
-            class="relative flex h-12 flex-shrink-0 flex-grow-0 items-center justify-center gap-2.5 self-stretch rounded-[11px] bg-[#0f7c67] px-4 py-[11px]"
-          >
-            <a
-              href="https://developers.google.com/womentechmakers/ambassadors"
-              class="w-[468px] flex-grow text-center text-base font-bold uppercase text-[#fefefe]"
-              target="_blank"
-              rel="noopener"
-            >
-              Conocer Más sobre el PROGRAMA
-            </a>
-          </div>
-        </div>
+          Conocer Más sobre el PROGRAMA
+        </a>
       </div>
     </div>
   </div>
 </div>
+<style>
+  .container-ambassadors {
+    display: flex;
+    width: 100%;
+    gap: 0.625rem;
+    background: #d1ece3;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    align-items: center;
+    justify-content: center;
+  }
+  .internal-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    width: 100%;
+  }
+  .container-images {
+    width: 30%;
+    height: 342px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .image-ambassadors {
+    width: 100%;
+    display: block;
+  }
+  .container-info-ambassadors {
+    height: 342px;
+    width: 30%;
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+  }
+  .text-title-container {
+    flex-shrink: 0;
+    flex-grow: 0;
+    align-self: stretch;
+    text-align: left;
+    font-size: 40px;
+    --tw-text-opacity: 1;
+    color: rgb(41 41 45 / var(--tw-text-opacity));
+  }
+  .text-detail-container {
+    flex-shrink: 0;
+    flex-grow: 0;
+    align-self: stretch;
+    text-align: left;
+    font-size: 22px;
+    --tw-text-opacity: 1;
+    color: rgb(76 85 91 / var(--tw-text-opacity));
+  }
+  @media (max-width: 1250px) {
+    .container-images {
+      display: none;
+    }
+    .container-info-ambassadors {
+      width: 100%;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .container-images {
+      display: none;
+    }
+    .container-info-ambassadors {
+      width: 100%;
+      padding-left: 40px;
+      padding-right: 40px;
+      height: 542px;
+    }
+  }
+</style>
