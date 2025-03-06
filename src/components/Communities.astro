@@ -1,50 +1,69 @@
 ---
 import { Image } from "astro:assets";
 import Ada from "../assets/images/community organizers/ada.png";
-import GDG from "../assets/images/community organizers/gdg-cocha-alter.png";
+import GDGCocha from "../assets/images/community organizers/gdg-cocha.png";
 import GP4Tech from "../assets/images/community organizers/gp4tech.png";
-
-const sponsors = [
-  {name: "Ada in Data", desc: "Comunidad de Data Science y de Inteligencia Artificial.‍", img: Ada, link: "https://www.facebook.com/adaindatabo" },
-  {name: "GDG Cochabamba", desc: "Grupo conformado por estudiantes, profesionales y entusiastas dedicados al diseño, desarrollo.", img: GDG, link: "https://www.facebook.com/GDGCochabamba" },
-  {name: "GP4Tech", desc: "Incentivar y motivar a más mujeres a participar del área de tecnología, mediante charlas y actividades.", img: GP4Tech, link: "https://www.facebook.com/GP4TechJala" }
-];
+import Mujeres from "../assets/images/community organizers/mujeres-que-inspiran.png";
 ---
 
-<section class="px-6 py-16 md:px-10 bg-teal-100">
-  <div class="container mx-auto">
-    <h2 class="text-center text-3xl font-medium leading-normal text-black mb-3">
-      Comunidades Organizadoras
-    </h2>
-    <p class="text-center font-light text-gray-700 max-w-2xl mx-auto mb-12">
-      Descubre todas las comunidades que forman parte de la organización del
-      evento
-    </p>
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 justify-items-center">
-      {sponsors.map(({name, desc, img, link }) => (
-        <a 
-          href={link} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="w-full max-w-[300px] bg-white rounded-lg shadow-md transition-all duration-500 hover:shadow-xl hover:scale-105 hover:-translate-y-2"
-          aria-label={`Visitar la página de ${name}`}
-        >
-          <div class="aspect-square overflow-hidden">
-            <Image 
-              src={img} 
-              alt={`Logo de ${name}`} 
-              width={300}
-              height={300}
-              loading="lazy" 
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="p-5">
-            <h3 class="font-bold text-lg text-black mb-2">{name}</h3>
-            <p class="text-sm text-gray-700">{desc}</p>
-          </div>
-        </a>
-      ))}
-    </div>
+<section class="px-6 py-20 md:px-10">
+  <h2 class="text-center text-3xl font-medium leading-normal text-[black]">
+    Comunidades Organizadoras
+  </h2>
+  <p class="text-center font-light">
+    Descubre todas las comunidades que forman parte de la organización del
+    evento
+  </p>
+  <div
+    class="mt-14 grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-around gap-5"
+  >
+    <a
+      href="https://www.facebook.com/adaindatabo"
+      target="_blank"
+      rel="noopener"
+    >
+      <Image
+        src={Ada}
+        alt="Ada In Data Logo"
+        class="m-auto mb-5 w-20"
+        loading="lazy"
+      />
+    </a>
+    <a
+      href="https://www.facebook.com/GDGCochabamba "
+      target="_blank"
+      rel="noopener"
+    >
+      <Image
+        src={GDGCocha}
+        alt="GDG Cochabamba logo"
+        class="m-auto mb-5 w-28 sm:w-40"
+        loading="lazy"
+      />
+    </a>
+    <a
+      href="https://www.facebook.com/GP4TechJala"
+      target="_blank"
+      rel="noopener"
+    >
+      <Image
+        src={GP4Tech}
+        alt="GP4Tech logo"
+        class="m-auto mb-5 w-24"
+        loading="lazy"
+      />
+    </a>
+    <a
+      href="https://www.facebook.com/mujeresqueinspiranBolivia/"
+      target="_blank"
+      rel="noopener"
+    >
+      <Image
+        src={Mujeres}
+        alt="Mujeres que Inspiran logo"
+        class="m-auto mb-5 w-24"
+        loading="lazy"
+      />
+    </a>
   </div>
 </section>
