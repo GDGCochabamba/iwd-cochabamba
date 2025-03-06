@@ -1,76 +1,17 @@
----
-import { Image } from "astro:assets";
-import logoInstagram from "../assets/images/logo-instagram.svg";
-import logoFacebook from "../assets/images/logo-facebook.svg";
-import logoLinkedin from "../assets/images/logo-linkedin.svg";
-import logotiktok from "../assets/images/logo-tiktok.svg";
-
----
-
-<div class="footer">
-  <div class="container mx-auto p-10">
-    <div class="text-center">
-      <h2 class="text-2xl font-medium md:text-3xl">
-        Síguenos en nuestras redes sociales
-      </h2>
-      <p class="text-md mt-2 md:text-lg">
-        No te pierdas las últimas noticias y actualizaciones.
+<div
+  class="flex flex-col justify-start items-center flex-grow-0 flex-shrink-0 w-full gap-2.5 py-10 bg-white"
+>
+  <div
+    class="flex flex-col justify-start items-center flex-grow-0 flex-shrink-0 w-[637px] gap-[26px]"
+  >
+    <div
+      class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative"
+    >
+      <p
+        class="self-stretch flex-grow-0 flex-shrink-0 w-[637px] text-[22px] text-center text-[#4c555b]"
+      >
+        GDG Cochabamba - 2025
       </p>
-      <div class="mt-4 flex justify-center">
-        <a
-          href="https://www.facebook.com/wtmcochabamba"
-          class="mr-2 flex items-center space-x-1 md:mr-4"
-          target="_blank"
-          rel="noopener"
-        >
-          <Image
-            class="h-8 w-8 md:h-10 md:w-10"
-            src={logoFacebook}
-            alt="WTM Cochabamba en Facebook"
-          />
-        </a>
-        <a
-          href="https://www.instagram.com/wtmcochabamba"
-          class="ml-2 flex items-center space-x-1 md:ml-4"
-          target="_blank"
-          rel="noopener"
-        >
-          <Image
-            class="h-8 w-8 md:h-10 md:w-10"
-            src={logoInstagram}
-            alt="WTM Cochabamba en Instagram"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/company/gdg-cochabamba"
-          class="ml-2 flex items-center space-x-1 md:ml-4"
-          target="_blank"
-          rel="noopener"
-        >
-          <Image
-            class="h-8 w-8 md:h-10 md:w-10"
-            src={logoLinkedin}
-            alt="GDG Cochabamba en Linkedin"
-          />
-        </a>
-        <a
-          href="https://www.tiktok.com/@gdg.cochabamba"
-          class="ml-2 flex items-center space-x-1 md:ml-4"
-          target="_blank"
-          rel="noopener"
-        >
-          <Image
-            class="h-8 w-8 md:h-10 md:w-10"
-            src={logotiktok}
-            alt="GDG Cochabamba en TikTok"
-          />
-        </a>
-      </div>
     </div>
   </div>
 </div>
-<style>
-  .footer {
-    background-color: #c1e4fd;
-  }
-</style>

@@ -1,60 +1,77 @@
 ---
 import { Image } from "astro:assets";
-import { organizers } from "../data/organizers";
+import megafono from "../assets/images/megafono.png";
+import telefono from "../assets/images/telefono.png";
+import laptop from "../assets/images/laptop.png";
+import papelLapiz from "../assets/images/papel-lapiz.png";
 ---
 
-<section class="px-6 py-20 md:px-10">
-  <h2 class="text-center text-3xl font-medium leading-normal text-[black]">
-    Equipo Organizador
-  </h2>
-  <p class="text-center font-light">Cochabamba</p>
+<div
+  class="flex w-full flex-shrink-0 flex-grow-0 flex-col items-center justify-start gap-2.5 bg-[#d1ece3] py-[120px]"
+>
   <div
-    class="mt-16 grid grid-cols-1 gap-5 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
+    class="relative flex w-[1024px] flex-shrink-0 flex-grow-0 items-center justify-start gap-6"
   >
-    {
-      organizers.map((organizer) => (
-        <div class="ambassador-card rounded-md border-2 border-solid border-slate-200 p-3 pl-5">
-          <div class="flex flex-col items-center justify-between lg:flex-row lg:justify-around">
-            <!-- Image container -->
-            <div class="lg:w-1/3">
-              <Image
-                src={organizer.img}
-                alt="Organizer Photo"
-                loading="lazy"
-                class="h-52 w-52 rounded-2xl object-cover md:mr-3 md:h-44 md:w-44"
-              />
-            </div>
-            <!-- Organizer details container -->
-            <div class="flex flex-col items-center justify-center lg:w-2/3">
-              <h5 class="mb-1 mt-2 text-center font-light lg:mt-0">
-                {organizer.name}
-              </h5>
-              <p class="mb-2 text-center text-xs font-thin text-black text-opacity-50 lg:mt-1 lg:text-sm">
-                {organizer.bio}
-              </p>
-              <div class="flex items-center space-x-2">
-                {organizer.social.map((socialItem) => (
-                  <a href={socialItem.src} target="_blank" rel="noopener">
-                    <Image
-                      class="h-5 w-5 lg:h-6 lg:w-6"
-                      src={socialItem.social_img}
-                      alt="Social Media logo"
-                    />
-                  </a>
-                ))}
-              </div>
-            </div>
+    <div class="flex-grow self-stretch">
+      <Image
+        src={megafono}
+        alt="Megafono"
+        class="absolute left-[-0.5px] top-[-0.5px] h-[171px] w-[250px] object-contain"
+      /><Image
+        src={telefono}
+        alt="Telefono"
+        class="absolute left-[249.5px] top-[-0.5px] h-[171px] w-[250px] object-contain"
+      /><Image
+        src={laptop}
+        alt="Laptop"
+        class="absolute left-[249.5px] top-[170.5px] h-[171px] w-[250px] object-contain"
+      /><Image
+        src={papelLapiz}
+        alt="Papel Lapiz"
+        class="absolute left-[-0.5px] top-[170.5px] h-[171px] w-[250px] object-contain"
+      />
+    </div>
+    <div class="h-[342px] flex-grow">
+      <div
+        class="absolute left-[524px] top-0 flex w-[500px] flex-col items-start justify-start gap-4"
+      >
+        <div
+          class="flex flex-shrink-0 flex-grow-0 flex-col items-start justify-start gap-6 self-stretch"
+        >
+          <div
+            class="relative flex flex-shrink-0 flex-grow-0 flex-col items-start justify-start self-stretch"
+          >
+            <p
+              class="w-[500px] flex-shrink-0 flex-grow-0 self-stretch text-left text-[40px] text-[#29292d]"
+            >
+              <span
+                class="w-[500px] flex-shrink-0 flex-grow-0 self-stretch text-left text-[40px] text-[#29292d]"
+                >Programa
+              </span><br /><span
+                class="w-[500px] flex-shrink-0 flex-grow-0 self-stretch text-left text-[40px] text-[#29292d]"
+                >WTM Ambassadors</span
+              >
+            </p>
+            <p
+              class="w-[500px] flex-shrink-0 flex-grow-0 self-stretch text-left text-[22px] text-[#4c555b]"
+            >
+              El programa Women Techmakers de Google brinda visibilidad,
+              comunidad y recursos para mujeres en la tecnología. Empodera a las
+              mujeres en sus carreras al brindarles acceso a recursos y eventos
+              seleccionados, así como a información y herramientas de Google.
+            </p>
+          </div>
+          <div
+            class="relative flex h-12 flex-shrink-0 flex-grow-0 items-center justify-center gap-2.5 self-stretch rounded-[11px] bg-[#0f7c67] px-4 py-[11px]"
+          >
+            <p
+              class="w-[468px] flex-grow text-center text-base font-bold uppercase text-[#fefefe]"
+            >
+              Conocer Más sobre el PROGRAMA
+            </p>
           </div>
         </div>
-
-      ))
-    }
+      </div>
+    </div>
   </div>
-</section>
-<style>
-    .ambassador-card{
-        border: 2px solid #8a8a8a;
-        border-bottom: 6px solid #8a8a8a ;
-        background: white;
-    }
-</style>
+</div>
