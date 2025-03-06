@@ -2,26 +2,26 @@
 import { Image } from "astro:assets";
 import Ada from "../assets/images/community organizers/ada.png";
 import GDGCocha from "../assets/images/community organizers/gdg-cocha.png";
-// import MujeresTics from "../assets/images/community organizers/mujeres-tics.png";
-// import Notion from "../assets/images/community organizers/notion.png";
-// import Pyladies from "../assets/images/community organizers/pyladies.png";
-// import WtmCocha from "../assets/images/community organizers/wtm-cocha.png";
-// import GEGCocha from "../assets/images/community organizers/GEG-cocha.png";
-// import AngularBolivia from "../assets/images/community organizers/angular-bolivia.png";
 import GP4Tech from "../assets/images/community organizers/gp4tech.png";
 import MQILogo from "../assets/images/community organizers/mqi.png";
 ---
 
-<section class="px-6 py-20 md:px-10">
-  <h2 class="text-center text-3xl font-medium leading-normal text-[black]">
-    Comunidades Organizadoras
-  </h2>
-  <p class="text-center font-light">
-    Descubre todas las comunidades que forman parte de la organización del
-    evento
-  </p>
+<section
+  class="flex w-full flex-shrink-0 flex-grow-0 flex-col items-center justify-start gap-8 bg-[#f9f9f9] px-6 py-[120px]"
+>
   <div
-    class="mt-14 grid grid-cols-2 items-center justify-around gap-5 sm:grid-cols-3 lg:grid-cols-4"
+    class="relative flex flex-shrink-0 flex-grow-0 flex-col items-center justify-start gap-1"
+  >
+    <p class="flex-shrink-0 flex-grow-0 text-center text-[40px] text-[#29292d]">
+      Comunidades Organizadoras
+    </p>
+    <p class="flex-shrink-0 flex-grow-0 text-center text-[22px] text-[#4c555b]">
+      Descubre todas las comunidades que forman parte de la organización del
+      evento
+    </p>
+  </div>
+  <div
+    class="relative flex flex-shrink-0 flex-grow-0 items-start justify-start gap-8"
   >
     <a
       href="https://www.facebook.com/adaindatabo"
@@ -32,7 +32,7 @@ import MQILogo from "../assets/images/community organizers/mqi.png";
         src={Ada}
         alt="Ada In Data Logo"
         loading="lazy"
-        class="m-auto mb-5 w-20"
+        class="m-auto mb-5 h-40 w-40 flex-shrink-0 flex-grow-0 rounded-xl border object-contain"
       />
     </a>
     <a
@@ -44,7 +44,7 @@ import MQILogo from "../assets/images/community organizers/mqi.png";
         src={GDGCocha}
         alt="GDG Cochabamba logo"
         loading="lazy"
-        class="m-auto mb-5 w-28 sm:w-40"
+        class="m-auto mb-5 h-40 w-40 flex-shrink-0 flex-grow-0 rounded-xl border object-contain"
       />
     </a>
     <a
@@ -56,7 +56,7 @@ import MQILogo from "../assets/images/community organizers/mqi.png";
         src={GP4Tech}
         alt="gp4tech logo"
         loading="lazy"
-        class="m-auto mb-5 w-24"
+        class="m-auto mb-5 h-40 w-40 flex-shrink-0 flex-grow-0 rounded-xl border object-contain"
       />
     </a>
     <a
@@ -68,7 +68,7 @@ import MQILogo from "../assets/images/community organizers/mqi.png";
         src={MQILogo}
         alt="mqi logo"
         loading="lazy"
-        class="m-auto mb-5 w-24"
+        class="m-auto mb-5 h-40 w-40 flex-shrink-0 flex-grow-0 rounded-xl border object-contain"
       />
     </a>
   </div>

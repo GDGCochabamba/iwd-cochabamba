@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+import Calendar from "../assets/images/calendar.svg";
+import Clock from "../assets/images/clock.svg";
+import Location from "../assets/images/location.svg";
+---
+
+<div
+  class="flex justify-center items-start self-stretch flex-grow-0 flex-shrink-0 gap-6 px-6 py-10 bg-[#d1ece3]"
+>
+  <div
+    class="flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 h-[110px] w-64 gap-2.5 p-6 rounded-2xl bg-white"
+  >
+    <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative">
+      <Image src={Calendar} alt="Calendar icon" />
+      <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-1">
+        <p class="flex-grow-0 flex-shrink-0 w-36 text-sm text-left text-[#4c555b]">Fecha:</p>
+        <p class="flex-grow-0 flex-shrink-0 text-[22px] font-bold text-left text-[#2480f0]">
+          15 de Marzo
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 h-[110px] w-64 gap-2.5 p-6 rounded-2xl bg-white"
+  >
+    <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative">
+      <Image src={Clock} alt="Clock" />
+      <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-1">
+        <p class="flex-grow-0 flex-shrink-0 w-36 text-sm text-left text-[#4c555b]">Hora:</p>
+        <p
+          class="self-stretch flex-grow-0 flex-shrink-0 w-36 text-[22px] font-bold text-left text-[#2480f0]"
+        >
+          9:00 AM
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 h-[110px] w-64 gap-2.5 p-6 rounded-2xl bg-white"
+  >
+    <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative">
+      <Image src={Location} alt="location icon" />
+      <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-1">
+        <p class="flex-grow-0 flex-shrink-0 w-36 text-sm text-left text-[#4c555b]">Lugar:</p>
+        <p class="flex-grow-0 flex-shrink-0 text-[22px] font-bold text-left text-[#2480f0]">
+          Jalasoft
+        </p>
+        <p class="flex-grow-0 flex-shrink-0 w-36 text-xs text-left text-[#4c555b]">
+          Av. Melchor Pérez de Olguín 2643
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
