@@ -2,12 +2,8 @@
 import { Image } from "astro:assets";
 import Ada from "../assets/images/community organizers/ada.png";
 import GDGCocha from "../assets/images/community organizers/gdg-cocha.png";
-import MujeresTics from "../assets/images/community organizers/mujeres-tics.png";
-import Notion from "../assets/images/community organizers/notion.png";
-import Pyladies from "../assets/images/community organizers/pyladies.png";
-import WtmCocha from "../assets/images/community organizers/wtm-cocha.png";
-import GEGCocha from "../assets/images/community organizers/GEG-cocha.png";
-import AngularBolivia from "../assets/images/community organizers/angular-bolivia.png";
+import GP4Tech from "../assets/images/community organizers/gp4tech.png";
+import Mujeres from "../assets/images/community organizers/mujeres-que-inspiran.png";
 ---
 
 <section class="px-6 py-20 md:px-10">
@@ -19,7 +15,7 @@ import AngularBolivia from "../assets/images/community organizers/angular-bolivi
     evento
   </p>
   <div
-    class="mt-14 grid grid-cols-2 items-center justify-around gap-5 sm:grid-cols-3 lg:grid-cols-8"
+    class="mt-14 grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-around gap-5"
   >
     <a
       href="https://www.facebook.com/adaindatabo"
@@ -29,8 +25,8 @@ import AngularBolivia from "../assets/images/community organizers/angular-bolivi
       <Image
         src={Ada}
         alt="Ada In Data Logo"
-        loading="lazy"
         class="m-auto mb-5 w-20"
+        loading="lazy"
       />
     </a>
     <a
@@ -41,80 +37,32 @@ import AngularBolivia from "../assets/images/community organizers/angular-bolivi
       <Image
         src={GDGCocha}
         alt="GDG Cochabamba logo"
-        loading="lazy"
         class="m-auto mb-5 w-28 sm:w-40"
+        loading="lazy"
       />
     </a>
     <a
-      href="https://www.facebook.com/MujeresTICsBO"
+      href="https://www.facebook.com/GP4TechJala"
       target="_blank"
       rel="noopener"
     >
       <Image
-        src={MujeresTics}
-        alt="Mujeres Tics logo"
-        loading="lazy"
+        src={GP4Tech}
+        alt="GP4Tech logo"
         class="m-auto mb-5 w-24"
+        loading="lazy"
       />
     </a>
     <a
-      href="https://www.facebook.com/notionbolivia"
+      href="https://www.facebook.com/mujeresqueinspiranBolivia/"
       target="_blank"
       rel="noopener"
     >
       <Image
-        src={Notion}
-        alt="Notion logo"
-        loading="lazy"
+        src={Mujeres}
+        alt="Mujeres que Inspiran logo"
         class="m-auto mb-5 w-24"
-      />
-    </a>
-    <a
-      href="https://www.facebook.com/pyladiescbba"
-      target="_blank"
-      rel="noopener"
-    >
-      <Image
-        src={Pyladies}
-        alt="Pyladies logo"
         loading="lazy"
-        class="m-auto mb-5 w-24"
-      />
-    </a>
-    <a
-      href="https://www.facebook.com/wtmcochabamba?mibextid=ZbWKwL"
-      target="_blank"
-      rel="noopener"
-    >
-      <Image
-        src={WtmCocha}
-        alt="Wtm logo"
-        loading="lazy"
-        class="m-auto mb-5 w-24"
-      />
-    </a>
-    <a
-      href="https://www.facebook.com/groups/gegbolivia/?ref=share&mibextid=NSMWBT"
-      target="_blank"
-      rel="noopener"
-    >
-      <Image
-        src={GEGCocha}
-        alt="GEG logo"
-        loading="lazy"
-        class="m-auto mb-5 w-24"
-      />
-    </a>
-    <a
-      href="https://www.facebook.com/angularBolivia?mibextid=ZbWKwL"
-      target="_blank"
-      rel="noopener"
-    >
-      <Image
-        src={AngularBolivia}
-        alt="Angular Bolivia logo"
-        loading="lazy"
-        class="m-auto mb-5 w-24"
       />
     </a>
   </div>
