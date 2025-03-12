@@ -1,11 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import Usip from '../assets/images/sponsors/usip.png';
-import Michicosmico from '../assets/images/sponsors/michicosmico.png';
-import GDG from '../assets/images/sponsors/gdg.png';
-import Ecolapiz from '../assets/images/sponsors/ecolapiz.jpg';
-import Pepsi from '../assets/images/sponsors/pepsi.png';
-import Frutijugo from '../assets/images/sponsors/frutijugo.jpg';
+import WTMLogo from "../assets/images/sponsors/wtmLogo.png";
+import GP4Tech from "../assets/images/community organizers/gp4tech.png";
+import FDSLogo from "../assets/images/sponsors/fdsLogo.webp";
+import MichiCosmicoLogo from "../assets/images/sponsors/michiCosmicoLogo.jpeg";
+import BeautyLogo from "../assets/images/sponsors/beautyLogo.jpeg";
 ---
 
 <section class="px-6 py-20 pt-0 md:px-10">
@@ -15,83 +14,61 @@ import Frutijugo from '../assets/images/sponsors/frutijugo.jpg';
   <p class="text-center font-light">
     Conoce a las empresas que apoyan el evento.
   </p>
-  <div
-    class="mt-14 flex justify-center items-center gap-48"
-  >
+  <div class="mt-14 flex items-center justify-center gap-48">
     <a
-      href="https://usip.edu.bo/"
+      href="https://www.facebook.com/GP4TechJala"
       target="_blank"
       rel="noopener"
     >
       <Image
-        src={Usip}
-        alt="USIP logo"
+        src={GP4Tech}
+        alt="gp4tech logo"
         loading="lazy"
         class="m-auto mb-5 w-64"
       />
     </a>
     <a
-      href="https://developers.google.com/"
+      href="https://developers.google.com/womentechmakers"
       target="_blank"
       rel="noopener"
     >
       <Image
-        src={GDG}
-        alt="Google Developer Groups logo"
+        src={WTMLogo}
+        alt="WTM logo"
         loading="lazy"
         class="m-auto mb-5 w-64"
       />
     </a>
-  </div>
-  <div
-    class="flex justify-center items-center gap-32 mt-10"
-  >
-    <a
-      href="https://www.facebook.com/profile.php?id=61555614981317"
-      target="_blank"
-      rel="noopener"
-    >
+    <a href="https://fundaciondelsaber.org/" target="_blank" rel="noopener">
       <Image
-        src={Michicosmico}
-        alt="Michicosmico logo"
+        src={FDSLogo}
+        alt="FSD logo"
         loading="lazy"
-        class="m-auto mb-5 w-40"
+        class="m-auto mb-5 w-64"
       />
     </a>
     <a
-      href="https://www.facebook.com/ecolapiz.tarija"
+      href="https://www.instagram.com/impresiones_michicosmico/#"
       target="_blank"
       rel="noopener"
     >
       <Image
-        src={Ecolapiz}
-        alt="Ecolapiz"
+        src={MichiCosmicoLogo}
+        alt="MICHI COSMICO logo"
         loading="lazy"
-        class="m-auto mb-5 w-40"
+        class="m-auto mb-5 w-64"
       />
     </a>
     <a
-      href="https://www.facebook.com/PepsiBolivia"
+      href="https://www.facebook.com/thebeautytruckbolivia"
       target="_blank"
       rel="noopener"
     >
       <Image
-        src={Pepsi}
-        alt="Pepsi"
+        src={BeautyLogo}
+        alt="Beauty logo"
         loading="lazy"
-        class="m-auto mb-5 w-20"
-      />
-    </a>
-    <a
-      href="https://www.facebook.com/frutijugo"
-      target="_blank"
-      rel="noopener"
-    >
-      <Image
-        src={Frutijugo}
-        alt="Frutijugo"
-        loading="lazy"
-        class="m-auto mb-5 w-20"
+        class="m-auto mb-5 w-64"
       />
     </a>
   </div>
