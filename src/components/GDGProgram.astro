@@ -1,36 +1,153 @@
 ---
 import { Image } from "astro:assets";
-import gdgProgram from "../assets/images/gdg-program.svg";
+import gdgLogo from "../assets/images/gdg-logo.png";
+import gdgImage from "../assets/images/gdg-image.png";
+import logoInstagram from "../assets/images/logo-instagram.svg";
+import logoFacebook from "../assets/images/logo-facebook.svg";
+import logoLinkedin from "../assets/images/logo-linkedin.svg";
+import logotiktok from "../assets/images/logo-tiktok.svg";
 ---
 
-<div class="gdg-program">
-  <div class="container mx-auto px-4 py-8 md:py-10">
-    <div class="flex flex-row flex-col">
-      <div class="w-full">
-        <Image
-          class="mx-auto mb-2 h-auto w-4/5 rounded-lg md:mb-4 md:w-1/2 lg:w-1/3"
-          src={gdgProgram}
-          alt="Google Developer Group"
-        />
-      </div>
-      <div class="w-full py-2">
-        <p class="text-md mt-2 md:text-lg">
-          La comunidad Google Developer Group Cochabamba te da la oportunidad de
-          aprender nuevas habilidades en una variedad de formatos. También
-          conocerás a desarrolladores locales de forma virtual o en persona con
-          intereses similares en tecnología.
-        </p>
-        <p class="text-md mt-2 md:text-lg">
-          La comunidad se enorgullece de ser un entorno inclusivo donde todos
-          los interesados ​​en la tecnología, desde desarrolladores
-          principiantes hasta profesionales experimentados, pueden unirse.
-        </p>
+<div
+  class="flex flex-shrink-0 flex-grow-0 flex-col items-center justify-center gap-10 self-stretch bg-[#f9f9f9] px-6 py-[120px]"
+>
+  <div class="internal-container">
+    <div class="container-image-gdg">
+      <Image src={gdgImage} alt="gdgImage" class="image-gdg" />
+    </div>
+    <div class="container-info-gdg">
+      <Image
+        src={gdgLogo}
+        alt="GDG Cochabamba"
+        class="h-[34px] w-[400px] flex-shrink-0 flex-grow-0 object-contain"
+      />
+      <p class="text-info-gdg text-[22px] text-[#4c555b]">
+        <span class="text-info-gdg text-[22px] text-[#4c555b]">
+          La comunidad
+        </span>
+        <span class="text-info-gdg text-[22px] font-bold text-[#4c555b]">
+          Google Developer Group Cochabamba
+        </span>
+        <span class="text-info-gdg text-[22px] text-[#4c555b]">
+          te da la oportunidad de aprender nuevas habilidades en una variedad de
+          formatos. También conocerás a desarrolladores locales de forma virtual
+          o en persona con intereses similares en tecnología.
+        </span>
+        <br />
+      </p>
+      <div
+        class="relative flex flex-shrink-0 flex-grow-0 items-center justify-start gap-10 self-stretch"
+      >
+        <a
+          href="https://www.facebook.com/wtmcochabamba"
+          class="relative h-10 w-10 flex-shrink-0 flex-grow-0"
+          target="_blank"
+          rel="noopener"
+        >
+          <Image
+            class="h-8 w-8 md:h-10 md:w-10"
+            src={logoFacebook}
+            alt="WTM Cochabamba en Facebook"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/wtmcochabamba"
+          class="relative h-10 w-10 flex-shrink-0 flex-grow-0"
+          target="_blank"
+          rel="noopener"
+        >
+          <Image
+            class="h-8 w-8 md:h-10 md:w-10"
+            src={logoInstagram}
+            alt="WTM Cochabamba en Instagram"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/gdg-cochabamba"
+          class="relative h-10 w-10 flex-shrink-0 flex-grow-0"
+          target="_blank"
+          rel="noopener"
+        >
+          <Image
+            class="social-networks-gdg"
+            src={logoLinkedin}
+            alt="GDG Cochabamba en Linkedin"
+          />
+        </a>
+        <a
+          href="https://www.tiktok.com/@gdg.cochabamba"
+          class="relative h-10 w-10 flex-shrink-0 flex-grow-0"
+          target="_blank"
+          rel="noopener"
+        >
+          <Image
+            class="h-8 w-8 md:h-10 md:w-10"
+            src={logotiktok}
+            alt="GDG Cochabamba en TikTok"
+          />
+        </a>
       </div>
     </div>
   </div>
 </div>
 <style>
-  .gdg-program {
-    background-color: #f9f9f9;
+  .internal-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .container-image-gdg {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: flex-end;
+    align-self: flex-end;
+  }
+  .image-gdg {
+    width: 75%;
+    height: 100%;
+  }
+  .container-info-gdg {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+  .text-info-gdg {
+    width: 70%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    align-self: stretch;
+    text-align: left;
+  }
+  @media (max-width: 1200px) {
+    .image-gdg {
+      width: 100%;
+    }
+  }
+  @media (max-width: 1024px) {
+    .internal-container {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .container-image-gdg {
+      width: 90%;
+      align-items: center;
+      align-content: center;
+      align-self: center;
+    }
+    .image-gdg {
+      width: 100%;
+    }
+    .text-info-gdg {
+      width: 100%;
+    }
   }
 </style>
