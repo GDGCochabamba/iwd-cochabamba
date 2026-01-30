@@ -1,30 +1,73 @@
 ---
 import { Image } from "astro:assets";
-import previousEvent from "../assets/images/previous-event.jpeg";
+import aboutWinay from "../assets/images/about-winay.png";
+import aprendizajeIcon from "../assets/icons/aprendizaje-about-icon.svg"
+import comunidadIcon from "../assets/icons/comunidad-about-icon.svg"
+import inspiracionIcon from "../assets/icons/inspiracion-about-icon.svg"
+import networkingIcon from "../assets/icons/networking-about-icon.svg"
+
+const details: {title: string, desc: string, icon: ImageMetadata}[] = [
+  {
+    title: "Networking",
+    desc: "Conecta con profesionales y lideres tech de toda Bolivia",
+    icon: networkingIcon
+  },
+  {
+    title: "Aprendizaje",
+    desc: "Descubre las últimas tendencias y tecnologías del mercado",
+    icon: aprendizajeIcon
+  },
+  {
+    title: "Comunidad",
+    desc: "Forma parte de una red de apoyo y crecimiento mutuo",
+    icon: comunidadIcon
+  },
+  {
+    title: "Inspiración",
+    desc: "Motívate con historias reales de éxito y superación",
+    icon: inspiracionIcon
+  }
+]
 ---
 
-<div class="flex justify-center items-start gap-6 px-6 py-10 bg-[#d1ece3]">
-  <div class="flex w-full flex-col justify-center p-4 md:w-1/2">
-    <h2 class="mb-4 text-left text-2xl font-medium md:text-3xl">
-      Redefine lo Posible Test
-    </h2>
-    <p class="text-md mb-4 md:text-lg">
-      ¿Qué significa Redefinir lo posible?
-    </p>
-    <p class="text-md md:text-lg">
-      🚀 Romper las reglas antiguas sobre lo que es posible en tecnología y abrir nuevos caminos hacia el futuro.
-      💪 Poner a las mujeres al frente del futuro de la tecnología, no solo como espectadoras.
-      🌟 Unir diferentes perspectivas para crear tecnología mejor para todos.
-      ⚡ Convertir grandes ideas en cambios reales, paso a paso.
-      🎯 Construir tecnología que beneficie a todos y piense en el mañana, no solo en el presente.
-      🌐 Tomar el control del futuro de la tecnología en lugar de esperar a que otros lo definan.
-    </p>
-  </div>
-  <div class="flex w-full items-center p-4 md:w-1/3">
-    <Image
-      class="mx-auto h-auto w-full rounded-lg md:w-5/6 xl:w-3/5"
-      src={previousEvent}
-      alt="Evento anterior de WTM Cochabamba"
-    />
+<div class="flex lg:px-[128px] lg:py-[72px] bg-[#ffffff] border border-red-700">
+  <div class="flex lg:flex-row sm:flex-col justify-center items-start gap-6 border border-red-500">
+    <div class="flex flex-col h-full justify-center p-4 md:w-1/2">
+      <h2 class="mb-4 text-left text-3xl font-bold md:text-5xl">
+        ¿Qué es WiñayTech?
+      </h2>
+      <p class="text-md mb-4 md:text-lg">
+        El Día Internacional de la Mujer se celebra anualmente en marzo como momento reconocido mundialmente para celebrar los logros de las mujeres y crear conciencia sobre las cuestiones que afectan la igualdad de género. 
+      </p>
+      <div class="flex flex-col flex-grow justify-around">
+        {
+          details.map(d => (
+            <div class="flex gap-4">
+              <Image src={d.icon} alt={d.title} class="w-12 h-12" /> 
+              <div>
+                <h4 class="font-[600]">{d.title}</h4>
+                <p>{d.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class="flex w-full items-center md:w-1/2">
+      <Image
+        class="h-auto w-full rounded-xl"
+        src={aboutWinay}
+        alt="Evento anterior de WTM Cochabamba"
+      />
+    </div>
   </div>
 </div>
+
+<style>
+  h2 {
+    color: #101828;
+  }
+  p {
+    color: #4A5565;
+  }
+</style>
