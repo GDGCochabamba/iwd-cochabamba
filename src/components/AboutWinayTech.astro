@@ -30,16 +30,16 @@ const details: {title: string, desc: string, icon: ImageMetadata}[] = [
 ]
 ---
 
-<div class="flex lg:px-[128px] lg:py-[72px] bg-[#ffffff] border border-red-700">
-  <div class="flex lg:flex-row sm:flex-col justify-center items-start gap-6 border border-red-500">
-    <div class="flex flex-col h-full justify-center p-4 md:w-1/2">
-      <h2 class="mb-4 text-left text-3xl font-bold md:text-5xl">
+<div class="flex lg:px-[128px] md:px-[64px] lg:py-[72px] md:py-[42px] bg-[#ffffff] border border-red-700">
+  <div class="flex lg:flex-row md:flex-col justify-center items-start gap-6 border border-red-500">
+    <div class="flex flex-col h-full">
+      <h2 class="mb-4 lg:text-left md:text-center text-3xl font-bold md:text-5xl">
         ¿Qué es WiñayTech?
       </h2>
-      <p class="text-md mb-4 md:text-lg">
+      <p class="text-md mb-4 md:text-lg lg:text-left md:text-center">
         El Día Internacional de la Mujer se celebra anualmente en marzo como momento reconocido mundialmente para celebrar los logros de las mujeres y crear conciencia sobre las cuestiones que afectan la igualdad de género. 
       </p>
-      <div class="flex flex-col flex-grow justify-around">
+      <div class="grid lg:grid-cols-1 md:grid-cols-2 gap-6">
         {
           details.map(d => (
             <div class="flex gap-4">
@@ -53,7 +53,7 @@ const details: {title: string, desc: string, icon: ImageMetadata}[] = [
         }
       </div>
     </div>
-    <div class="flex w-full items-center md:w-1/2">
+    <div class="flex w-full items-center">
       <Image
         class="h-auto w-full rounded-xl"
         src={aboutWinay}
