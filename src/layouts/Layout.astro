@@ -34,6 +34,7 @@ import GoogleAnalytics from "../components/GoogleAnalytics.astro";
       name="og:description"
       content="IWD celebra los logros femeninos y promueve la igualdad de género. Este año, bajo el tema 'Impactar el futuro', impulsamos a mujeres en tecnología a liderar cambios"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   </head>
   <body>
     <slot />
@@ -41,12 +42,12 @@ import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 
     <style is:global>
       @font-face {
-        font-family: "Product Sans";
-        src: url("../assets/fonts/ProductSans-Regular.ttf") format("truetype");
+        font-family: 'Poppins';
+        src: url('../assets/fonts/Poppins-Regular.ttf') format('truetype');
       }
 
       body {
-        font-family: "Product Sans", sans-serif;
+        font-family: 'Poppins', sans-serif;
       }
     </style>
   </body>
