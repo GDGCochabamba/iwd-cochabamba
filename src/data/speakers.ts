@@ -27,6 +27,8 @@ export const speakers = [
     img: CamilaVia,
     name: "Camila Flor Via",
     bio: "CEO de Podcast Agarrate Catalina",
+    category: "Inspiracional",
+    time: "10:00 - 10:45",
     social: [
       {
         social_img: logoFacebook,
@@ -42,6 +44,8 @@ export const speakers = [
     img: FlaviaDavila,
     name: "Flavia Maylin Davila Perez",
     bio: "Ing. Industrial",
+    category: "IA",
+    time: "10:00 - 10:45",
     social: [
       {
         social_img: logoInstagram,
@@ -53,6 +57,8 @@ export const speakers = [
     img: NatalyGemio,
     name: "Nataly Alejandra Gemio Morales",
     bio: "Estudiante de informatica en la Universidad Mayor De San Andres.",
+    category: "Web",
+    time: "10:00 - 10:45",
     social: [
       {
         social_img: logoFacebook,
@@ -72,6 +78,8 @@ export const speakers = [
     img: GabrielaTorrico,
     name: "Gabriela Nathaly Torrico",
     bio: "Agente de soporte técnico IT y Docente de Sistemas Informáticos.",
+    category: "Comunidad",
+    time: "10:00 - 10:45",
     social: [
       {
         social_img: logoLinkedin,
@@ -83,6 +91,8 @@ export const speakers = [
     img: AdrianaPaz,
     name: "Adriana Eileen Paz Rivas",
     bio: "Ing. Electromecánica y Profesora de violín.",
+    category: "Inspiracional",
+    time: "10:00 - 10:45",
     social: [
       {
         social_img: logoInstagram,
@@ -98,6 +108,8 @@ export const speakers = [
     img: JacquelineMejia,
     name: "Jacqueline Susan Mejía",
     bio: "Ingeniera de Sistemas / Data Analyst.",
+    category: "IA",
+    time: "10:00 - 10:45",
     social: [
       {
         social_img: logoFacebook,
@@ -121,6 +133,8 @@ export const speakers = [
     img: NataliaAlfaro,
     name: "Natalia Lorena Alfaro Fernández",
     bio: "Assuresoft - Senior Software Developer",
+    category: "Web",
+    time: "10:00 - 10:45",
     social: [
       {
         social_img: logoLinkedin,
@@ -132,6 +146,8 @@ export const speakers = [
     img: MariaGarcia,
     name: "Maria Griselda Garcia Flores",
     bio: "Jalasoft / Software engineer",
+    category: "Web",
+    time: "10:00 - 10:45",
     social: [
       {
         social_img: logoFacebook,
@@ -151,6 +167,8 @@ export const speakers = [
     img: FrancisBanos,
     name: "Francis Nicole Baños Flores",
     bio: "Estudiante de Ingeniería de Sistemas.",
+    category: "Comunidad",
+    time: "10:00 - 10:45",
     social: [
       {
         social_img: logoFacebook,
@@ -178,6 +196,8 @@ export const speakers = [
     img: LupeMelany,
     name: "Lupe Canaviri & Melany Ventura",
     bio: "Estudiante de cine en la UMSA (Lupe), Organizer r00thouse HackLab La Paz (Melany).",
+    category: "Comunidad",
+    time: "10:00 - 10:45",
     social: [
       {
         social_img: logoInstagram,
@@ -201,6 +221,8 @@ export const speakers = [
     img: PedroAnze,
     name: "Pedro Anze",
     bio: "GDG Organizer, Web Developer, Estudiante de Ingeniería de Sistemas",
+    category: "Web",
+    time: "10:00 - 10:45",
     social: [
       {
         social_img: logoFacebook,
@@ -220,6 +242,8 @@ export const speakers = [
     img: CarliCode,
     name: "Carli Code",
     bio: "Head of AI at Dapta",
+    category: "IA",
+    time: "10:00 - 10:45",
     social: [
       {
         social_img: logoLinkedin,
@@ -231,6 +255,8 @@ export const speakers = [
     img: MauricioArce,
     name: "Mauricio Arce Torrez",
     bio: "Jalasoft / Technical Lead / Ingeniero de Sistemas",
+    category: "Diseño UI UX",
+    time: "10:00 - 10:45",
     social: [
       {
         social_img: logoWeb,
@@ -242,6 +268,8 @@ export const speakers = [
     img: ReneCardozo,
     name: "Rene Cardozo",
     bio: "ONU",
+    category: "Inspiracional",
+    time: "10:00 - 10:45",
     social: [
       {
         social_img: logoLinkedin,
@@ -253,6 +281,8 @@ export const speakers = [
     img: ElynMamani,
     name: "Elyn Maya Mamani Mamani",
     bio: "Cofundadora de la Academia de Programación y Robótica Educativa mi MakerHouse",
+    category: "Comunidad",
+    time: "10:00 - 10:45",
     social: [
       {
         social_img: logoYoutube,
