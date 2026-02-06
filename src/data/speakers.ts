@@ -26,6 +26,7 @@ export const speakers = [
   {
     img: CamilaVia,
     name: "Camila Flor Via",
+    speakerTopic: "El futuro de la IA Generativa en Latinoamérica",
     bio: "CEO de Podcast Agarrate Catalina",
     category: "Inspiracional",
     time: "10:00 - 10:45",
@@ -43,6 +44,7 @@ export const speakers = [
   {
     img: FlaviaDavila,
     name: "Flavia Maylin Davila Perez",
+    speakerTopic: "Transformando industrias con IA",
     bio: "Ing. Industrial",
     category: "IA",
     time: "10:00 - 10:45",
@@ -56,6 +58,7 @@ export const speakers = [
   {
     img: NatalyGemio,
     name: "Nataly Alejandra Gemio Morales",
+    speakerTopic: "Desarrollo web moderno y escalable",
     bio: "Estudiante de informatica en la Universidad Mayor De San Andres.",
     category: "Web",
     time: "10:00 - 10:45",
@@ -77,6 +80,7 @@ export const speakers = [
   {
     img: GabrielaTorrico,
     name: "Gabriela Nathaly Torrico",
+    speakerTopic: "Comunidad tech: Creando espacios inclusivos",
     bio: "Agente de soporte técnico IT y Docente de Sistemas Informáticos.",
     category: "Comunidad",
     time: "10:00 - 10:45",
@@ -90,6 +94,7 @@ export const speakers = [
   {
     img: AdrianaPaz,
     name: "Adriana Eileen Paz Rivas",
+    speakerTopic: "Rompiendo barreras en STEM",
     bio: "Ing. Electromecánica y Profesora de violín.",
     category: "Inspiracional",
     time: "10:00 - 10:45",
@@ -107,6 +112,7 @@ export const speakers = [
   {
     img: JacquelineMejia,
     name: "Jacqueline Susan Mejía",
+    speakerTopic: "Data Analytics: Del análisis a la acción",
     bio: "Ingeniera de Sistemas / Data Analyst.",
     category: "IA",
     time: "10:00 - 10:45",
@@ -132,6 +138,7 @@ export const speakers = [
   {
     img: NataliaAlfaro,
     name: "Natalia Lorena Alfaro Fernández",
+    speakerTopic: "Arquitectura de software en proyectos grandes",
     bio: "Assuresoft - Senior Software Developer",
     category: "Web",
     time: "10:00 - 10:45",
@@ -145,6 +152,7 @@ export const speakers = [
   {
     img: MariaGarcia,
     name: "Maria Griselda Garcia Flores",
+    speakerTopic: "Desarrollo fullstack con tecnologías modernas",
     bio: "Jalasoft / Software engineer",
     category: "Web",
     time: "10:00 - 10:45",
@@ -166,6 +174,7 @@ export const speakers = [
   {
     img: FrancisBanos,
     name: "Francis Nicole Baños Flores",
+    speakerTopic: "Iniciándose en ingeniería de sistemas",
     bio: "Estudiante de Ingeniería de Sistemas.",
     category: "Comunidad",
     time: "10:00 - 10:45",
@@ -195,6 +204,7 @@ export const speakers = [
   {
     img: LupeMelany,
     name: "Lupe Canaviri & Melany Ventura",
+    speakerTopic: "Comunidades tech y hackathons en Bolivia",
     bio: "Estudiante de cine en la UMSA (Lupe), Organizer r00thouse HackLab La Paz (Melany).",
     category: "Comunidad",
     time: "10:00 - 10:45",
@@ -220,6 +230,7 @@ export const speakers = [
   {
     img: PedroAnze,
     name: "Pedro Anze",
+    speakerTopic: "Desarrollo web y comunidad open source",
     bio: "GDG Organizer, Web Developer, Estudiante de Ingeniería de Sistemas",
     category: "Web",
     time: "10:00 - 10:45",
@@ -241,6 +252,7 @@ export const speakers = [
   {
     img: CarliCode,
     name: "Carli Code",
+    speakerTopic: "IA generativa: Aplicaciones prácticas",
     bio: "Head of AI at Dapta",
     category: "IA",
     time: "10:00 - 10:45",
@@ -254,6 +266,7 @@ export const speakers = [
   {
     img: MauricioArce,
     name: "Mauricio Arce Torrez",
+    speakerTopic: "Diseño UX/UI en la era digital",
     bio: "Jalasoft / Technical Lead / Ingeniero de Sistemas",
     category: "Web",
     time: "10:00 - 10:45",
@@ -267,6 +280,7 @@ export const speakers = [
   {
     img: ReneCardozo,
     name: "Rene Cardozo",
+    speakerTopic: "Sostenibilidad y tecnología",
     bio: "ONU",
     category: "Inspiracional",
     time: "10:00 - 10:45",
@@ -280,6 +294,7 @@ export const speakers = [
   {
     img: ElynMamani,
     name: "Elyn Maya Mamani Mamani",
+    speakerTopic: "Educación en programación y robótica",
     bio: "Cofundadora de la Academia de Programación y Robótica Educativa mi MakerHouse",
     category: "Comunidad",
     time: "10:00 - 10:45",
