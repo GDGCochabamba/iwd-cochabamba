@@ -29,10 +29,10 @@ const getCategoryColor = (category: string) => {
       {categories.map((category) => (
         <button
           data-category={category}
-          class={`filter-btn px-4 py-2 rounded-2xl text-sm font-medium transition-all ${
+          class={`filter-btn px-4 py-2 rounded-2xl border border-gray-200 text-sm font-medium transition-all ${
             category === "Todas"
               ? "bg-[#1DE9B6] text-white"
-              : "bg-gray-200 text-gray-700 hover:bg-[#1DE9B6] hover:text-white"
+              : "bg-white text-gray-700 hover:bg-[#1DE9B6] hover:text-white"
           }`}
         >
           {category}
@@ -154,10 +154,10 @@ const getCategoryColor = (category: string) => {
 
       filterButtons.forEach((btn) => {
         btn.classList.remove("bg-[#1DE9B6]", "text-white");
-        btn.classList.add("bg-gray-200", "text-gray-700");
+        btn.classList.add("bg-white", "text-gray-700");
       });
 
-      (button as HTMLElement).classList.remove("bg-gray-200", "text-gray-700");
+      (button as HTMLElement).classList.remove("bg-white", "text-gray-700");
       (button as HTMLElement).classList.add("bg-[#1DE9B6]", "text-white");
 
       let visibleCount = 0;
