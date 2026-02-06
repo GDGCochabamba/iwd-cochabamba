@@ -255,7 +255,7 @@ export const speakers = [
     img: MauricioArce,
     name: "Mauricio Arce Torrez",
     bio: "Jalasoft / Technical Lead / Ingeniero de Sistemas",
-    category: "Diseño UI UX",
+    category: "Web",
     time: "10:00 - 10:45",
     social: [
       {

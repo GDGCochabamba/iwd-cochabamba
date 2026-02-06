@@ -40,11 +40,11 @@ const getCategoryColor = (category: string) => {
       ))}
     </div>
 
-    <div id="speakers-grid" class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div id="speakers-grid" class="mt-14 flex flex-wrap justify-center gap-6">
       {speakers.map((speaker) => (
         <div
           data-category={speaker.category}
-          class="speaker-card rounded-xl bg-white p-5 shadow-lg transition-all hover:shadow-xl"
+          class="speaker-card w-full max-w-sm rounded-xl bg-white p-5 shadow-lg transition-all hover:shadow-xl"
           style={{
             boxShadow: "0 4px 20px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(200, 200, 200, 0.3)"
           }}
@@ -117,6 +117,16 @@ const getCategoryColor = (category: string) => {
           </div>
         </div>
       ))}
+
+      <div id="empty-state" class="col-span-full flex w-full items-center justify-center py-20 hidden">
+        <div class="text-center">
+          <svg class="mx-auto h-16 w-16 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+          </svg>
+          <h3 class="text-lg font-semibold text-slate-900">Esperando speakers</h3>
+          <p class="mt-2 text-sm text-slate-600">Pronto se actualizará esta sección con más speakers</p>
+        </div>
+      </div>
     </div>
 
     <div class="mt-12 flex justify-center">
@@ -135,6 +145,8 @@ const getCategoryColor = (category: string) => {
 <script>
   const filterButtons = document.querySelectorAll(".filter-btn");
   const speakerCards = document.querySelectorAll(".speaker-card");
+  const emptyState = document.getElementById("empty-state");
+  const speakersGrid = document.getElementById("speakers-grid");
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -148,14 +160,23 @@ const getCategoryColor = (category: string) => {
       (button as HTMLElement).classList.remove("bg-gray-200", "text-gray-700");
       (button as HTMLElement).classList.add("bg-[#1DE9B6]", "text-white");
 
+      let visibleCount = 0;
+
       speakerCards.forEach((card) => {
         const cardCategory = (card as HTMLElement).getAttribute("data-category");
         if (selectedCategory === "Todas" || cardCategory === selectedCategory) {
           (card as HTMLElement).style.display = "block";
+          visibleCount++;
         } else {
           (card as HTMLElement).style.display = "none";
         }
       });
+
+      if (visibleCount === 0) {
+        emptyState?.classList.remove("hidden");
+      } else {
+        emptyState?.classList.add("hidden");
+      }
     });
   });
 </script>
