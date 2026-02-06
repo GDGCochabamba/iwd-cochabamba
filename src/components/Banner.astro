@@ -1,36 +1,89 @@
 ---
 import { Image } from "astro:assets";
-import bannerTile from "../assets/images/banner.svg";
+import bannerTile from "../assets/images/banner-title.svg";
+import bannerGroupImage from "../assets/images/group-banner-image.svg"
+import addressIcon from "../assets/icons/address-banner-icon.svg"
+import dateIcon from "../assets/icons/date-banner-icon.svg"
+import locationIcon from "../assets/icons/location-banner-icon.svg"
+import charlasIcon from "../assets/icons/charlas-banner-icon.svg"
+import speakersIcon from "../assets/icons/speakers-banner-icon.svg"
+import comunidadesIcon from "../assets/icons/comunidades-banner-icon.svg"
+import asistentesIcon from "../assets/icons/asistentes-banner-icon.svg"
+
+const details: {icon: ImageMetadata, text: string}[] = [
+  {icon: dateIcon, text: "15 de Marzo, 2026"},
+  {icon: locationIcon, text: "Cochabamba"},
+  {icon: addressIcon, text: "Centro de Convenciones"},
+]
+
+const statistics: {icon: ImageMetadata, text: string, detail:string}[] = [
+  {icon: charlasIcon, text: "4+", detail: "Charlas"},
+  {icon: speakersIcon, text: "4+", detail: "Speakers"},
+  {icon: comunidadesIcon, text: "12+", detail: "Comunidades"},
+  {icon: asistentesIcon, text: "500+", detail: "Asistentes"},
+]
 ---
 
 <section
-  class="banner relative mt-10 w-full bg-contain bg-center bg-no-repeat pt-20 text-center md:mt-8 lg:mt-4 xl:mt-0 mb-20"
+  class="flex flex-col banner mt-14 py-[52px] bg-[linear-gradient(135deg,_#FFFFFF_0%,_rgba(29,233,182,0.2)_50%,_rgba(255,55,199,0.2)_100%)]"
 >
-  <Image src={bannerTile} alt="banner image" class="m-auto mt-10 mb-5" />
-  <div class="flex w-full flex-col items-center justify-center gap-5">
-    <p
-      class="textdetail mb-5 mt-5 flex-shrink-0 flex-grow-0 text-center text-[22px] text-[#4c555b]"
-    >
-      Un día de charlas inspiradoras, talleres y oportunidades de networking
-      mientras exploramos cómo redefinir lo que es posible en el mundo de la
-      tecnología.
-    </p>
+  <div class="flex flex-col">
+    <div class="flex justify-center gap-14">
+      <div class="flex flex-col gap-6">
+        <div class="flex flex-col">
+          <Image src={bannerTile} alt="banner image" class="" />
+          <p class="w-[533px] mt-6">
+            El evento de tecnología, comunidad e inspiración que conecta a las mentes más brillantes de Bolivia.
+          </p>
+        </div>
+        <div class="flex gap-3">
+          {
+            details.map(d => (
+              <div class="flex py-[8px] px-[16px] gap-2 bg-white rounded-[14px] border border-[#F3F4F6] shadow-[0px_1px_2px_-1px_rgba(0,0,0,0.1),_0px_1px_3px_0px_rgba(0,0,0,0.1)]">
+                <Image src={d.icon} alt={d.text} class="size-5" />
+                <p>{d.text}</p>
+              </div>
+            ))
+          }
+        </div>
+        <div class="flex gap-4">
+          <button class="bg-[#1DE9B6] rounded-[16px] py-4 px-8 shadow-[0px_4px_6px_-4px_rgba(0,0,0,0.1),_0px_10px_15px_-3px_rgba(0,0,0,0.1)] font-semibold">
+            Inscribirme ahora
+          </button>
+          <button class="bg-white rounded-[16px] py-4 px-8 shadow-[0px_4px_6px_-4px_rgba(0,0,0,0.1),_0px_10px_15px_-3px_rgba(0,0,0,0.1)] font-semibold border-2 border-[#FF37C7]">
+            Ver agenda
+          </button>
+        </div>
+      </div>
+      <div class="flex">
+        <Image src={bannerGroupImage} alt="banner group image" class="p-[10px] rounded-[20px] bg-white" />
+      </div>
+    </div>
+    <div class="flex justify-center gap-12">
+    {
+      statistics.map(s => (
+        <div class="flex flex-col px-[25px] pt-[25px] pb-[1px] border border-[#F3F4F6] bg-white rounded-[16px] gap-2 w-[278px]">
+          <div class="flex gap-[12px] ">
+            <Image src={s.icon} alt={s.text} class="size-[24px]" />
+            <span class="text-3xl font-bold">{s.text}</span>
+          </div>
+          <p>
+            {s.detail}
+          </p>
+        </div>
+      ))
+    }
+    </div>
   </div>
-  <!--<div id="registerButtonContainer">-->
-  <!--  <a-->
-  <!--    href="https://events.gdg.com.bo/winay-tech-2025"-->
-  <!--    class="inline-block w-full rounded-lg bg-[#0f7c67] px-4 py-2 text-xl font-medium text-white lg:w-1/4"-->
-  <!--    target="_blank"-->
-  <!--    rel="noopener">Inscríbete aquí</a-->
-  <!--  >-->
-  <!--</div>-->
 </section>
 
 <style>
-  .textdetail {
-    width: 50%;
+  h2 {
+    color: #101828;
   }
-
+  p {
+    color: #4A5565;
+  }
 </style>
 
 <script>
