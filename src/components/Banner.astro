@@ -27,12 +27,12 @@ const statistics: {icon: ImageMetadata, text: string, detail:string}[] = [
 <section
   class="flex flex-col banner mt-14 py-[52px] bg-[linear-gradient(135deg,_#FFFFFF_0%,_rgba(29,233,182,0.2)_50%,_rgba(255,55,199,0.2)_100%)]"
 >
-  <div class="flex flex-col">
+  <div class="flex flex-col gap-16">
     <div class="flex justify-center gap-14">
-      <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-6 items-center lg:items-start">
         <div class="flex flex-col">
           <Image src={bannerTile} alt="banner image" class="" />
-          <p class="w-[533px] mt-6">
+          <p class="text-center lg:text-left w-[533px] mt-6">
             El evento de tecnología, comunidad e inspiración que conecta a las mentes más brillantes de Bolivia.
           </p>
         </div>
@@ -55,14 +55,14 @@ const statistics: {icon: ImageMetadata, text: string, detail:string}[] = [
           </button>
         </div>
       </div>
-      <div class="flex">
+      <div class="hidden lg:flex">
         <Image src={bannerGroupImage} alt="banner group image" class="p-[10px] rounded-[20px] bg-white" />
       </div>
     </div>
-    <div class="flex justify-center gap-12">
+    <div class="flex justify-center gap-6 lg:gap-12">
     {
       statistics.map(s => (
-        <div class="flex flex-col px-[25px] pt-[25px] pb-[1px] border border-[#F3F4F6] bg-white rounded-[16px] gap-2 w-[278px]">
+        <div class="flex flex-col px-[25px] pt-[25px] pb-[1px] border border-[#F3F4F6] bg-white rounded-[16px] gap-2 w-[158px] lg:w-[278px]">
           <div class="flex gap-[12px] ">
             <Image src={s.icon} alt={s.text} class="size-[24px]" />
             <span class="text-3xl font-bold">{s.text}</span>
