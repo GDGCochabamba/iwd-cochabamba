@@ -1,154 +1,301 @@
 ---
 import { Image } from "astro:assets";
-import gdgLogo from "../assets/images/gdg-logo.png";
-import gdgImage from "../assets/images/gdg-image.png";
-import logoInstagram from "../assets/images/logo-instagram.svg";
-import logoFacebook from "../assets/images/logo-facebook.svg";
-import logoLinkedin from "../assets/images/logo-linkedin.svg";
-import logotiktok from "../assets/images/logo-tiktok.svg";
+import gdgImage from "../assets/images/gdg-image1.png";
+import MapPin from "../assets/images/mapPin-icon.svg";
+import PersonIcon from "../assets/images/person-icon.svg";
+import CalendarIcon from "../assets/images/calendar-icon.svg";
+import ExternalLinkIcon from "../assets/images/external-link-icon.svg";
+import JavierMendoza from "../assets/images/javier-mendoza.png";
 ---
 
 <div
-  id="comunidades"
-  class="flex flex-shrink-0 flex-grow-0 flex-col items-center justify-center gap-10 self-stretch bg-[#f9f9f9] px-6 py-[120px]"
+  class="flex flex-shrink-0 flex-grow-0 flex-col items-center justify-center self-stretch px-5 py-[50px]" id="comunidades"
 >
   <div class="internal-container">
-    <div class="container-image-gdg">
-      <Image src={gdgImage} alt="gdgImage" class="image-gdg" />
+    <div class="container-left">
+        <div class="flex w-fit justify-center gap-2 bg-[#1DE9B633] rounded-[14px] p-2 px-4">
+          <Image src={PersonIcon} alt="person icon"/>
+          <span class="text-[14px] text-[#101828] font-semibold">
+            comunidad destacada
+          </span>
+        </div>
+        <span class="text-title">GDG Cochabamba</span>
+        <p class="text-description">
+            Google Developer Group Cochabamba es una comunidad de desarrolladores apasionados por las tecnologías de Google. Organizamos eventos, talleres y charlas para compartir conocimiento y fomentar la innovación tecnológica en Bolivia.
+        </p>
+        <div class="gdg-stats-grid">
+          <article class="gdg-stat-card">
+            <Image src={PersonIcon} alt="person icon"/>
+            <span class="gdg-stat-value">100+</span>
+            <span class="gdg-stat-label">Miembros</span>
+          </article>
+          <article class="gdg-stat-card">
+            <Image src={CalendarIcon} alt="calendar icon"/>
+            <span class="gdg-stat-value">50+</span>
+            <span class="gdg-stat-label">Eventos</span>
+          </article>
+        </div>
+        <div class="flex gap-2 items-start">
+          <Image src={MapPin} alt="mapPin"/>
+          <span>
+            Cochabamba - Bolivia
+          </span>
+        </div>
+        <button class="btn-gdg">
+          <p class="text-[#101828]">Conocer GDG Cochabamba</p>
+          <Image src={ExternalLinkIcon} alt="external link icon"/>
+        </button>
+
     </div>
-    <div class="container-info-gdg">
-      <Image
-        src={gdgLogo}
-        alt="GDG Cochabamba"
-        class="h-[34px] w-[400px] flex-shrink-0 flex-grow-0 object-contain"
-      />
-      <p class="text-info-gdg text-[22px] text-[#4c555b]">
-        <span class="text-info-gdg text-[22px] text-[#4c555b]">
-          La comunidad
-        </span>
-        <span class="text-info-gdg text-[22px] font-bold text-[#4c555b]">
-          Google Developer Group Cochabamba
-        </span>
-        <span class="text-info-gdg text-[22px] text-[#4c555b]">
-          te da la oportunidad de aprender nuevas habilidades en una variedad de
-          formatos. También conocerás a desarrolladores locales de forma virtual
-          o en persona con intereses similares en tecnología.
-        </span>
-        <br />
-      </p>
-      <div
-        class="relative flex flex-shrink-0 flex-grow-0 items-center justify-start gap-10 self-stretch"
-      >
-        <a
-          href="https://www.facebook.com/wtmcochabamba"
-          class="relative h-10 w-10 flex-shrink-0 flex-grow-0"
-          target="_blank"
-          rel="noopener"
-        >
-          <Image
-            class="h-8 w-8 md:h-10 md:w-10"
-            src={logoFacebook}
-            alt="WTM Cochabamba en Facebook"
-          />
-        </a>
-        <a
-          href="https://www.instagram.com/wtmcochabamba"
-          class="relative h-10 w-10 flex-shrink-0 flex-grow-0"
-          target="_blank"
-          rel="noopener"
-        >
-          <Image
-            class="h-8 w-8 md:h-10 md:w-10"
-            src={logoInstagram}
-            alt="WTM Cochabamba en Instagram"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/company/gdg-cochabamba"
-          class="relative h-10 w-10 flex-shrink-0 flex-grow-0"
-          target="_blank"
-          rel="noopener"
-        >
-          <Image
-            class="social-networks-gdg"
-            src={logoLinkedin}
-            alt="GDG Cochabamba en Linkedin"
-          />
-        </a>
-        <a
-          href="https://www.tiktok.com/@gdg.cochabamba"
-          class="relative h-10 w-10 flex-shrink-0 flex-grow-0"
-          target="_blank"
-          rel="noopener"
-        >
-          <Image
-            class="h-8 w-8 md:h-10 md:w-10"
-            src={logotiktok}
-            alt="GDG Cochabamba en TikTok"
-          />
-        </a>
-      </div>
+
+
+
+
+    <div class="container-right">
+      <Image src={gdgImage} alt="gdgImage" class="image-gdg" />
+      <!--<div class="container-team">-->
+      <!--  <span class="team-title">Equipo Core</span>-->
+      <!--  <div class="team-grid">-->
+      <!--    <div class="team-member">-->
+      <!--      <Image src={JavierMendoza} alt="Javier Mendoza" class="member-photo" />-->
+      <!--      <span class="member-name">Javier Mendoza</span>-->
+      <!--    </div>-->
+      <!--    <div class="team-member">-->
+      <!--      <Image src={JavierMendoza} alt="Javier Mendoza" class="member-photo" />-->
+      <!--      <span class="member-name">Carla Flores</span>-->
+      <!--    </div>-->
+      <!--    <div class="team-member">-->
+      <!--      <Image src={JavierMendoza} alt="Javier Mendoza" class="member-photo" />-->
+      <!--      <span class="member-name">Luis Paredes</span>-->
+      <!--    </div>-->
+      <!--    <div class="team-member">-->
+      <!--      <Image src={JavierMendoza} alt="Javier Mendoza" class="member-photo" />-->
+      <!--      <span class="member-name">Elena Soto</span>-->
+      <!--    </div>-->
+      <!--    <div class="team-member">-->
+      <!--      <Image src={JavierMendoza} alt="Javier Mendoza" class="member-photo" />-->
+      <!--      <span class="member-name">Diego Castro</span>-->
+      <!--    </div>-->
+      <!--    <div class="team-member">-->
+      <!--      <Image src={JavierMendoza} alt="Javier Mendoza" class="member-photo" />-->
+      <!--      <span class="member-name">Melissa Vargas</span>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--</div>-->
     </div>
   </div>
 </div>
+
+
+
 <style>
   .internal-container {
-    width: 100%;
+    width: 70%;
+    max-width: 1200px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
-  .container-image-gdg {
-    width: 50%;
-    height: 100%;
+  .internal-container > * {
+    width: 100%;
+    max-width: 100%;
+    align-self: stretch;
+  }
+  .container-left{
     display: flex;
+    flex: 1;
     flex-direction: column;
-    align-items: flex-end;
-    align-content: flex-end;
-    align-self: flex-end;
+    justify-content: center;
+    gap: 1rem;
+    padding: 48px;
   }
-  .image-gdg {
-    width: 75%;
-    height: 100%;
+  .container-right{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px;
+    gap: 0.5rem;
+    align-items: center;
+    background-color: #F9FAFB;
+    border-radius: 0 10px 10px 0;
   }
-  .container-info-gdg {
-    width: 50%;
-    height: 100%;
+  .text-title{
+    font-size: 36px;
+    color:#101828 ;
+    font-weight:900;
+  }
+  .text-description{
+    text-size: 16px;
+    color: #4A5565;
+    font-weight: 400;
+    line-height: 26px;
+  }
+  .gdg-info,
+  .gdg-side {
+    width: 100%;
+  }
+  .gdg-stats-grid {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+  }
+  .gdg-stat-card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 0.2rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 14px;
+    background-color: #F9FAFB;
+  }
+  .gdg-stat-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #101828;
+  }
+  .gdg-stat-label {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #4A5565;
+  }
+  .image-gdg {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
   }
   .text-info-gdg {
-    width: 70%;
     flex-shrink: 0;
     flex-grow: 0;
     align-self: stretch;
-    text-align: left;
+    width: 100%;
   }
-  @media (max-width: 1200px) {
-    .image-gdg {
-      width: 100%;
-    }
+
+  .btn-gdg {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #1DE9B6;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 40px;
+    box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.1),  0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.2s ease;
   }
+  .btn-gdg p {
+    color: #101828;
+    margin: 0;
+    font-weight: 500;
+  }
+  .btn-gdg:hover {
+    background-color: #17d3a5;
+    transform: translateY(-2px);
+  }
+
+  .container-team{
+    displey:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+  }
+  .team-title{
+    font-weight: 700;
+  }
+  .team-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px 35px;
+    padding-top: 16px;
+    width: 100%;
+  }
+  .team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100px;
+  }
+
+.member-photo {
+  height: 80px;
+  width: 80px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.member-name {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: #4A5565;
+}
+
   @media (max-width: 1024px) {
     .internal-container {
-      flex-direction: column;
-      gap: 50px;
-    }
-    .container-image-gdg {
       width: 90%;
+      max-width: 90%;
+      gap: 1rem;
+      flex-direction: column;
+    }
+    .container-left {
       align-items: center;
-      align-content: center;
-      align-self: center;
     }
-    .image-gdg {
-      width: 100%;
+    .container-right{
+      border-radius: 0 0 10px 10px;
     }
-    .text-info-gdg {
+    .text-description{
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .internal-container {
+      flex-direction: column;
       width: 100%;
+      gap: 1.5rem;
+    }
+    .internal-container > * {
+      width: 100%;
+      align-self: stretch;
+    }
+    .container-left {
+      width: 100%;
+      padding: 24px;
+    }
+    .container-right{
+      border-radius: 0 10px 10px 0;
+      padding: 24px;
+    }
+    .text-title{
+     font-size: 28px;
+    }
+    .text-description{
+     text-size: 14px;
+    }
+    .btn-gdg{
+      padding: 12px 25px;
+    }
+
+    .container-team {
+      display: none;
+    }
+  }
+  @media (max-width: 460px) {
+    .btn-gdg{
+      padding: 12px 15px;
     }
   }
 </style>
