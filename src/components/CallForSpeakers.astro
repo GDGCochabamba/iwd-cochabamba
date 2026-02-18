@@ -1,79 +1,184 @@
 ---
 import { Image } from "astro:assets";
-import Speakers from "../assets/images/Speakers.svg";
+import { speakers } from "../data/speakers";
+
+const categories = ["Todas", "IA", "Diseño UI UX", "Web", "Inspiracional", "Comunidad"];
+
+const getCategoryColor = (category: string) => {
+  const colors: Record<string, string> = {
+    "IA": "bg-cyan-300",
+    "Diseño UI UX": "bg-orange-300",
+    "Web": "bg-purple-300",
+    "Inspiracional": "bg-pink-300",
+    "Comunidad": "bg-green-300",
+  };
+  return colors[category] || "bg-gray-300";
+};
 ---
 
-<div
-  id="speakers"
-  class="flex w-full flex-shrink-0 flex-grow-0 flex-col items-center justify-start gap-2.5 bg-white px-6 py-20"
->
-  <div
-    class="relative flex flex-shrink-0 flex-grow-0 flex-col items-center justify-start gap-6 self-stretch"
-  >
-    <div
-      class="relative flex flex-shrink-0 flex-grow-0 flex-col items-center justify-start self-stretch"
-    >
-      <p
-        class="w-full flex-shrink-0 flex-grow-0 self-stretch text-center text-[40px] text-[#1a3e38]"
-      >
-        Charlas y speakers
-      </p>
+<section class="w-full bg-white px-6 py-16 md:px-10 md:py-20">
+  <div class="mx-auto max-w-7xl" id="speakers">
+    <h1 class="text-center text-4xl font-bold text-slate-900 md:text-5xl">
+      Charlas & Speakers
+    </h1>
+    <p class="mt-2 text-center text-sm text-slate-600 md:text-base">
+      Aprende de los mejores expertos en tecnología, diseño y productos de la región
+    </p>
+
+    <div class="mt-10 flex flex-wrap justify-center gap-2 md:gap-3">
+      {categories.map((category) => (
+        <button
+          data-category={category}
+          class={`filter-btn px-4 py-2 rounded-2xl border border-gray-200 text-sm font-medium transition-all hover:bg-[#1DE9B6] hover:text-white ${
+            category === "Todas"
+              ? "bg-[#1DE9B6] text-white"
+              : "bg-white text-gray-700"
+          }`}
+        >
+          {category}
+        </button>
+      ))}
     </div>
-    <Image src={Speakers} alt="Speakers" />
-    <div
-      class="flex flex-shrink-0 flex-grow-0 flex-col items-center justify-start gap-6 self-stretch"
-    >
-      <div
-        class="flex flex-shrink-0 flex-grow-0 flex-col items-center justify-start gap-6 self-stretch"
-      >
+
+    <div id="speakers-grid" class="mt-14 flex flex-wrap justify-center gap-6">
+      {speakers.map((speaker) => (
         <div
-          class="relative flex flex-shrink-0 flex-grow-0 flex-col items-center justify-start gap-1 self-stretch"
+          data-category={speaker.category}
+          class="speaker-card w-full max-w-md rounded-xl bg-white p-5 shadow-lg transition-all hover:shadow-xl"
+          style={{
+            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.08), inset 0 0 1px rgba(200, 200, 200, 0.3)"
+          }}
         >
-          <p
-            class="flex-shrink-0 flex-grow-0 text-center text-[22px] font-bold text-[#1a3e38]"
-          >
-            ¿Tienes una historia, experiencia o conocimiento que pueda inspirar
-            a otras mujeres?
-          </p>
-          <p
-            class="w-full flex-shrink-0 flex-grow-0 self-stretch text-center text-[22px] text-[#1a3e38]"
-          >
-            <span
-              class="w-full flex-shrink-0 flex-grow-0 self-stretch text-center text-[22px] text-[#1a3e38]"
-              >Si te apasiona compartir tu experiencia y motivar a otras
-              personas, ¡esta es tu oportunidad!
-            </span><br /><span
-              class="w-full flex-shrink-0 flex-grow-0 self-stretch text-center text-[22px] text-[#1a3e38]"
-              >💜 Postula ahora y sé parte de esta experiencia única.</span
-            ><br />
-          </p>
+          <div class="flex gap-4">
+            <div class="h-28 w-28 flex-shrink-0 overflow-hidden rounded-lg bg-gradient-to-br from-gray-100 to-gray-200">
+              {speaker.img && (
+                <Image
+                  src={speaker.img}
+                  alt={speaker.name}
+                  class="h-full w-full object-cover"
+                />
+              )}
+              {!speaker.img && (
+                <div class="flex h-full w-full items-center justify-center">
+                  <svg
+                    class="h-12 w-12 text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                  </svg>
+                </div>
+              )}
+            </div>
+
+            <div class="flex flex-1 flex-col justify-start">
+              <div class="flex items-start items-center gap-2 mb-2">
+                <div class={`${getCategoryColor(speaker.category)} w-fit rounded-full px-3 py-1 text-xs font-semibold text-gray-800`}>
+                  {speaker.category}
+                </div>
+                {speaker.time && (
+                  <p class="flex items-center gap-1 text-xs text-gray-600 whitespace-nowrap">
+                    <svg class="h-3.5 w-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    {speaker.time}
+                  </p>
+                )}
+              </div>
+
+              <h3 class="text-sm font-bold text-slate-900">
+                {speaker.name}
+              </h3>
+              <p class="text-xs text-gray-600">
+                {speaker.bio}
+              </p>
+            </div>
+          </div>
+
+          <h2 class="mt-4 text-base font-bold text-slate-900 leading-tight">
+            {speaker.speakerTopic}
+          </h2>
+
+          {speaker.social && speaker.social.length > 0 && (
+            <div class="flex gap-3 pt-3 mt-3">
+              {speaker.social.map((socialItem) => (
+                <a
+                  href={socialItem.src}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="transition-opacity hover:opacity-70"
+                >
+                  <Image
+                    src={socialItem.social_img}
+                    alt="Social media"
+                    class="h-5 w-5"
+                  />
+                </a>
+              ))}
+            </div>
+          )}
         </div>
-        <div
-          class="relative flex flex-shrink-0 flex-grow-0 items-center justify-center gap-2.5 rounded-lg bg-[#2480f0] px-[22px] py-2"
-          id="registerButtonContainer"
-        >
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScDQJ_j6CW9r1F1boGGbOxDaKhLnhuxBk6HvnHR4P8rSkYpXg/viewform"
-            class="flex-shrink-0 flex-grow-0 text-center text-xl font-medium text-white"
-            target="_blank"
-            rel="noopener"
-          >
-            Postular como Speaker
-          </a>
+      ))}
+
+      <div id="empty-state" class="col-span-full flex w-full items-center justify-center py-20 hidden">
+        <div class="text-center">
+          <svg class="mx-auto h-16 w-16 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+          </svg>
+          <h3 class="text-lg font-semibold text-slate-900">Esperando speakers</h3>
+          <p class="mt-2 text-sm text-slate-600">Pronto se actualizará esta sección con más speakers</p>
         </div>
       </div>
     </div>
+
+    <div class="mt-12 flex justify-center">
+      <a
+        href="https://forms.gle/cU27uj6ABxS3ZYF68"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="border-2 border-pink-500 px-10 py-3 font-semibold text-pink-500 transition-all hover:bg-pink-500 hover:text-white rounded-2xl md:px-12 md:py-4"
+      >
+        Postular como Speaker
+      </a>
+    </div>
   </div>
-</div>
+</section>
 
 <script>
-  let registerButtonContainer = document.getElementById(
-    "registerButtonContainer",
-  );
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const speakerCards = document.querySelectorAll(".speaker-card");
+  const emptyState = document.getElementById("empty-state");
+  const speakersGrid = document.getElementById("speakers-grid");
 
-  let showRegisterButton = true;
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const selectedCategory = (button as HTMLElement).getAttribute("data-category");
 
-  if (!showRegisterButton && registerButtonContainer !== null) {
-    registerButtonContainer.style.display = "none";
-  }
+      filterButtons.forEach((btn) => {
+        btn.classList.remove("bg-[#1DE9B6]", "text-white");
+        btn.classList.add("bg-white", "text-gray-700");
+      });
+
+      (button as HTMLElement).classList.remove("bg-white", "text-gray-700");
+      (button as HTMLElement).classList.add("bg-[#1DE9B6]", "text-white");
+
+      let visibleCount = 0;
+
+      speakerCards.forEach((card) => {
+        const cardCategory = (card as HTMLElement).getAttribute("data-category");
+        if (selectedCategory === "Todas" || cardCategory === selectedCategory) {
+          (card as HTMLElement).style.display = "block";
+          visibleCount++;
+        } else {
+          (card as HTMLElement).style.display = "none";
+        }
+      });
+
+      if (visibleCount === 0) {
+        emptyState?.classList.remove("hidden");
+      } else {
+        emptyState?.classList.add("hidden");
+      }
+    });
+  });
 </script>
