@@ -2,15 +2,21 @@
 import { Image } from "astro:assets";
 import { speakers } from "../data/speakers";
 
-const categories = ["Todas", "IA", "Diseño UI UX", "Web", "Inspiracional", "Comunidad"];
+const categories = ["Todas", ...new Set(speakers.map((s) => s.category))];
 
 const getCategoryColor = (category: string) => {
   const colors: Record<string, string> = {
-    "IA": "bg-cyan-300",
-    "Diseño UI UX": "bg-orange-300",
-    "Web": "bg-purple-300",
-    "Inspiracional": "bg-pink-300",
-    "Comunidad": "bg-green-300",
+    "Educación": "bg-cyan-300",
+    "Cultura": "bg-orange-300",
+    "Storytelling": "bg-purple-300",
+    "Salud Mental": "bg-pink-300",
+    "Desarrollo Personal": "bg-green-300",
+    "Derechos Digitales": "bg-yellow-300",
+    "Liderazgo": "bg-red-300",
+    "Trayectoria": "bg-blue-300",
+    "Marketing / IA": "bg-indigo-300",
+    "Trabajo Remoto": "bg-teal-300",
+    "Programación": "bg-gray-400",
   };
   return colors[category] || "bg-gray-300";
 };
