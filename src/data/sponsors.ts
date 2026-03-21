@@ -28,24 +28,13 @@ export const goldSponsors: SponsorTier = {
     // Array 1 - visible en móvil y superiores
     [
       {
-        name: "GP4Tech",
-        logo: "/src/assets/images/community organizers/gp4tech.png",
-        url: "https://www.facebook.com/GP4TechJala",
-      },
-      {
-        name: "Women Techmakers",
-        logo: "/src/assets/images/sponsors/wtmLogo.png",
-        url: "https://developers.google.com/womentechmakers",
+        name: "Bitget",
+        logo: "/src/assets/images/sponsors/bitget.png",
+        url: "https://www.bitget.com",
       },
     ],
     // Array 2 - visible en tablet y superiores
-    [
-      {
-        name: "Fundación del Saber",
-        logo: "/src/assets/images/sponsors/fdsLogo.webp",
-        url: "https://fundaciondelsaber.org/",
-      },
-    ],
+    [],
     // Array 3 - visible solo en desktop
     [],
   ],
@@ -63,32 +52,98 @@ export const silverSponsors: SponsorTier = {
   sponsors: [
     [
       {
-        name: "Michi Cósmico",
-        logo: "/src/assets/images/sponsors/michiCosmicoLogo.jpeg",
-        url: "https://www.instagram.com/impresiones_michicosmico/",
+        name: "Purple Hiring",
+        logo: "/src/assets/images/sponsors/purpleHiring.png",
+        url: "https://www.purplehiring.com",
       },
     ],
     [
       {
-        name: "Beauty Truck",
-        logo: "/src/assets/images/sponsors/beautyLogo.jpeg",
-        url: "https://www.facebook.com/thebeautytruckbolivia",
+        name: "Universidad Mayor de San Simón",
+        logo: "/src/assets/images/sponsors/umss.png",
+        url: "https://www.umss.edu.bo",
       },
     ],
-    [],
+    [
+      {
+        name: "UNIFRANZ",
+        logo: "/src/assets/images/sponsors/unifranz.png",
+        url: "https://www.unifranz.edu.bo",
+      },
+    ],
   ],
 };
 
-// Tier Bronce
+// Tier Supporting Partners
 export const bronzeSponsors: SponsorTier = {
-  name: "Patrocinadores Bronce",
+  name: "Supporting Partners",
   color: "text-orange-700",
   accentColor: "bg-orange-500",
   bgColor: "bg-orange-50",
   iconColor: "text-orange-600",
   icon: "heart",
   textColor: "text-[#CA3500]",
-  sponsors: [[], [], []],
+  sponsors: [
+    // Array 1 - visible en móvil y superiores
+    [
+      {
+        name: "Aguas de Santiago",
+        logo: "/src/assets/images/sponsors/aguasDeSantiago.png",
+        url: "#",
+      },
+      {
+        name: "Impresiones Michicosmico",
+        logo: "/src/assets/images/sponsors/michicosmico.png",
+        url: "https://www.instagram.com/impresiones_michicosmico/",
+      },
+      {
+        name: "The Pink Salón",
+        logo: "/src/assets/images/sponsors/thePinkSalon.png",
+        url: "#",
+      },
+      {
+        name: "Bhangare Dance Studio",
+        logo: "/src/assets/images/sponsors/bhangare.png",
+        url: "#",
+      },
+    ],
+    // Array 2 - visible en tablet y superiores
+    [
+      {
+        name: "Jala University",
+        logo: "/src/assets/images/sponsors/jalaUniversity.png",
+        url: "https://www.jalauniversity.com",
+      },
+      {
+        name: "Favorcito",
+        logo: "/src/assets/images/sponsors/favorcito.png",
+        url: "#",
+      },
+      {
+        name: "Biyuyo",
+        logo: "/src/assets/images/sponsors/biyuyo.png",
+        url: "#",
+      },
+    ],
+    // Array 3 - visible solo en desktop
+    [
+      {
+        name: "Twintro",
+        logo: "/src/assets/images/sponsors/twintro.png",
+        url: "#",
+      },
+      {
+        name: "Digital Services",
+        logo: "/src/assets/images/sponsors/digitalServices.png",
+        url: "#",
+      },
+      {
+        name: "Delve",
+        logo: "/src/assets/images/sponsors/delve.png",
+        url: "#",
+      },
+    ],
+  ],
 };
 
 export const allTiers = [goldSponsors, silverSponsors, bronzeSponsors];
