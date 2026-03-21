@@ -64,8 +64,7 @@ export const teamMembers: TeamMember[] = [
     name: "Luis Fernando Arce",
     photo: drivePhoto("1mSkvIO88fYaHwQyNcOsPgu5S0ICRZZRi"),
     instagram: "https://www.instagram.com/louferati",
-    linkedin:
-      "https://www.linkedin.com/in/luis-fernando-a-806811352",
+    linkedin: "https://www.linkedin.com/in/luis-fernando-a-806811352",
   },
   {
     name: "Rodrigo Illanes",
@@ -200,6 +199,16 @@ export const teamMembers: TeamMember[] = [
     name: "Gabriela Torrico",
     photo: drivePhoto("1kcBAkVxfHg0AxJp-Eyji1cbn5bxOQbFR"),
   },
+  {
+    name: "Verónica Cuéllar",
+    photo: drivePhoto("1Yrimramq1Eogo8dNmFplGC5PxqrOOL0c"),
+    instagram: "https://www.instagram.com/diandra_cuellar_mendieta",
+  },
+  {
+    name: "Daniela Vela",
+    photo: drivePhoto("1bXxDAqBd3zA1FNC3odP3Mbt7ggImY96I"),
+    instagram: "https://www.instagram.com/danielita.vo/?hl=en",
+  },
 ];
 
 export interface CoreTeamMember extends TeamMember {
@@ -207,17 +216,18 @@ export interface CoreTeamMember extends TeamMember {
 }
 
 const coreRoles: { match: string; role: string }[] = [
-  { match: "Nicole Herbas",    role: "Lead Sponsors" },
+  { match: "Nicole Herbas", role: "Lead Sponsors" },
   { match: "Gabriela Torrico", role: "Lead Decoración" },
-  { match: "Esther Romero",    role: "Lead Speakers" },
-  { match: "Doria",            role: "Lead Speakers" },
-  { match: "Clara Soria",      role: "Lead Marketing" },
-  { match: "Valentina Salinas",role: "Lead Diseño" },
-  { match: "Enix",             role: "Lead Logística" },
-  { match: "Alejandra Palza",  role: "Lead Dinámicas" },
+  { match: "Esther Romero", role: "Lead Speakers" },
+  { match: "Verónica Cuéllar", role: "Lead Video" },
+  { match: "Clara Soria", role: "Lead Marketing" },
+  { match: "Valentina Salinas", role: "Lead Diseño" },
+  { match: "Daniela Vela", role: "Lead Diseño" },
+  { match: "Enix", role: "Lead Logística" },
+  { match: "Alejandra Palza", role: "Lead Dinámicas" },
   { match: "Dayana Rodriguez", role: "Lead Web" },
-  { match: "Jessica Angulo",   role: "Lead Web" },
-  { match: "Edelfrida",        role: "Lead Registro" },
+  { match: "Jessica Angulo", role: "Lead Web" },
+  { match: "Edelfrida", role: "Lead Registro" },
 ];
 
 export const coreTeamMembers: CoreTeamMember[] = coreRoles
