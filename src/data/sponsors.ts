@@ -74,9 +74,9 @@ export const silverSponsors: SponsorTier = {
   ],
 };
 
-// Tier Supporting Partners
+// Tier Patrocinadores Bronce
 export const bronzeSponsors: SponsorTier = {
-  name: "Supporting Partners",
+  name: "Patrocinadores Bronce",
   color: "text-orange-700",
   accentColor: "bg-orange-500",
   bgColor: "bg-orange-50",
@@ -104,7 +104,7 @@ export const bronzeSponsors: SponsorTier = {
       {
         name: "Bhangare Dance Studio",
         logo: "/src/assets/images/sponsors/bhangare.png",
-        url: "#",
+        url: "https://www.facebook.com/liapatzibhangare/",
       },
     ],
     // Array 2 - visible en tablet y superiores
@@ -117,7 +117,7 @@ export const bronzeSponsors: SponsorTier = {
       {
         name: "Favorcito",
         logo: "/src/assets/images/sponsors/favorcito.png",
-        url: "#",
+        url: "https://www.facebook.com/tufavorcito/",
       },
       {
         name: "Biyuyo",
@@ -140,7 +140,7 @@ export const bronzeSponsors: SponsorTier = {
       {
         name: "Delve",
         logo: "/src/assets/images/sponsors/delve.png",
-        url: "#",
+        url: "https://delveedu.com/",
       },
     ],
   ],
