@@ -1,75 +1,69 @@
 ---
-import { Image } from "astro:assets";
-import WTMLogo from "../assets/images/sponsors/wtmLogo.png";
-import GP4Tech from "../assets/images/community organizers/gp4tech.png";
-import FDSLogo from "../assets/images/sponsors/fdsLogo.webp";
-import MichiCosmicoLogo from "../assets/images/sponsors/michiCosmicoLogo.jpeg";
-import BeautyLogo from "../assets/images/sponsors/beautyLogo.jpeg";
+import { allTiers } from "../data/sponsors";
+import SponsorCard from "./SponsorCard.astro";
+
+const activeTiers = allTiers.filter((tier) =>
+  tier.sponsors.some((arr) => arr.length > 0),
+);
 ---
 
-<section class="px-6 py-20 pt-0 md:px-10">
-  <h2 class="flex-shrink-0 flex-grow-0 text-center text-[40px] mt-5 text-[#29292d]">
-    Nuestros Auspiciadores
+<section id="aliados" class="px-6 py-16 md:px-10 md:py-20">
+  <h2 class="text-center text-3xl font-bold text-gray-900 md:text-4xl">
+    Nuestros Aliados
   </h2>
-  <p class="flex-shrink-0 flex-grow-0 text-center text-[22px] text-[#4c555b]">
-    Conoce a las empresas que apoyan el evento.
+  <p class="mt-3 text-center text-base text-gray-600 md:text-lg">
+    Gracias a estas organizaciones que apoyan el crecimiento del ecosistema tech
+    boliviano
   </p>
-  <div class="mt-14 flex items-center justify-center gap-48">
-    <a
-      href="https://www.facebook.com/GP4TechJala"
-      target="_blank"
-      rel="noopener"
-    >
-      <Image
-        src={GP4Tech}
-        alt="gp4tech logo"
-        loading="lazy"
-        class="m-auto mb-5 w-64"
-      />
-    </a>
-    <a
-      href="https://developers.google.com/womentechmakers"
-      target="_blank"
-      rel="noopener"
-    >
-      <Image
-        src={WTMLogo}
-        alt="WTM logo"
-        loading="lazy"
-        class="m-auto mb-5 w-64"
-      />
-    </a>
-    <a href="https://fundaciondelsaber.org/" target="_blank" rel="noopener">
-      <Image
-        src={FDSLogo}
-        alt="FSD logo"
-        loading="lazy"
-        class="m-auto mb-5 w-64"
-      />
-    </a>
-    <a
-      href="https://www.instagram.com/impresiones_michicosmico/#"
-      target="_blank"
-      rel="noopener"
-    >
-      <Image
-        src={MichiCosmicoLogo}
-        alt="MICHI COSMICO logo"
-        loading="lazy"
-        class="m-auto mb-5 w-64"
-      />
-    </a>
-    <a
-      href="https://www.facebook.com/thebeautytruckbolivia"
-      target="_blank"
-      rel="noopener"
-    >
-      <Image
-        src={BeautyLogo}
-        alt="Beauty logo"
-        loading="lazy"
-        class="m-auto mb-5 w-64"
-      />
-    </a>
+  <div class="mx-auto mt-12 max-w-5xl space-y-14">
+    {
+      activeTiers.map((tier) => (
+        <div>
+          <h3 class={`text-center text-xl font-bold ${tier.color} md:text-2xl`}>
+            {tier.name}
+          </h3>
+          <div class={`mx-auto mt-2 h-1 w-16 rounded ${tier.accentColor}`} />
+
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-4 md:gap-6">
+            {/* Array 1 - Siempre visible */}
+            {tier.sponsors[0].map((sponsor) => (
+              <SponsorCard
+                sponsor={sponsor}
+                bgColor={tier.bgColor}
+                iconColor={tier.iconColor}
+                icon={tier.icon}
+                textColor={tier.textColor}
+              />
+            ))}
+
+            {/* Array 2 - Visible en tablet+ */}
+            <div class="hidden md:contents">
+              {tier.sponsors[1].map((sponsor) => (
+                <SponsorCard
+                  sponsor={sponsor}
+                  bgColor={tier.bgColor}
+                  iconColor={tier.iconColor}
+                  icon={tier.icon}
+                  textColor={tier.textColor}
+                />
+              ))}
+            </div>
+
+            {/* Array 3 - Solo desktop */}
+            <div class="hidden lg:contents">
+              {tier.sponsors[2].map((sponsor) => (
+                <SponsorCard
+                  sponsor={sponsor}
+                  bgColor={tier.bgColor}
+                  iconColor={tier.iconColor}
+                  icon={tier.icon}
+                  textColor={tier.textColor}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      ))
+    }
   </div>
 </section>

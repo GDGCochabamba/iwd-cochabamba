@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import type { Sponsor } from "../data/sponsors";
+
+// Importar todas las imágenes de sponsors
+import WTMLogo from "../assets/images/sponsors/wtmLogo.png";
+import GP4Tech from "../assets/images/community organizers/gp4tech.png";
+import FDSLogo from "../assets/images/sponsors/fdsLogo.webp";
+import MichiCosmicoLogo from "../assets/images/sponsors/michiCosmicoLogo.jpeg";
+import BeautyLogo from "../assets/images/sponsors/beautyLogo.jpeg";
+
+interface Props {
+  sponsor: Sponsor;
+  bgColor: string;
+  iconColor: string;
+  icon: "medal" | "star" | "heart";
+  textColor: string;
+}
+
+const { sponsor, bgColor, iconColor, icon, textColor } = Astro.props;
+
+const imageMap: Record<string, ImageMetadata> = {
+  "/src/assets/images/sponsors/wtmLogo.png": WTMLogo,
+  "/src/assets/images/community organizers/gp4tech.png": GP4Tech,
+  "/src/assets/images/sponsors/fdsLogo.webp": FDSLogo,
+  "/src/assets/images/sponsors/michiCosmicoLogo.jpeg": MichiCosmicoLogo,
+  "/src/assets/images/sponsors/beautyLogo.jpeg": BeautyLogo,
+};
+
+const img = imageMap[sponsor.logo];
+---
+
+<a
+  href={sponsor.url}
+  target="_blank"
+  rel="noopener"
+  class={`group flex h-48 w-44 flex-col items-center justify-center rounded-2xl ${bgColor} p-4 shadow-md transition-all hover:shadow-lg`}
+>
+  {/* Contenedor de imagen con tamaño fijo */}
+  <div class="flex h-14 w-28 items-center justify-center">
+    {
+      img ? (
+        <Image
+          src={img}
+          alt={`${sponsor.name} logo`}
+          loading="lazy"
+          class="max-h-full max-w-full object-contain transition-transform group-hover:scale-105"
+        />
+      ) : (
+        <span class={`text-center text-sm font-semibold ${textColor}`}>
+          {sponsor.name}
+        </span>
+      )
+    }
+  </div>
+
+  {/* Nombre del sponsor */}
+  <span
+    class={`mt-3 line-clamp-2 text-center text-sm font-medium ${textColor}`}
+  >
+    {sponsor.name}
+  </span>
+</a>
