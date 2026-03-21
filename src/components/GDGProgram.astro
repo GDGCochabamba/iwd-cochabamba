@@ -62,7 +62,7 @@ import { coreTeamMembers } from "../data/teamMembers.ts";
       <div class="container-team">
         <span class="team-title">Equipo Core</span>
         <div class="team-grid">
-          {coreTeamMembers.map((member) => (
+          {coreTeamMembers.slice(0, 4).map((member) => (
             <div class="team-member">
               <img
                 src={member.photo}
@@ -74,6 +74,22 @@ import { coreTeamMembers } from "../data/teamMembers.ts";
             </div>
           ))}
         </div>
+        <div class="team-grid team-grid-extra" id="extra-members">
+          {coreTeamMembers.slice(4).map((member) => (
+            <div class="team-member">
+              <img
+                src={member.photo}
+                alt={member.name}
+                class="member-photo"
+                loading="lazy"
+              />
+              <span class="member-name">{member.name}</span>
+            </div>
+          ))}
+        </div>
+        <button class="btn-ver-mas" id="btn-ver-mas" aria-expanded="false">
+          Ver más
+        </button>
       </div>
     </div>
   </div>
@@ -293,4 +309,43 @@ import { coreTeamMembers } from "../data/teamMembers.ts";
       padding: 12px 15px;
     }
   }
+
+  .team-grid-extra {
+    display: none;
+  }
+  .team-grid-extra.visible {
+    display: flex;
+  }
+
+  .btn-ver-mas {
+    display: block;
+    margin: 12px auto 0;
+    background: none;
+    border: 1.5px solid #1de9b6;
+    color: #101828;
+    border-radius: 14px;
+    padding: 8px 28px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
+  }
+  .btn-ver-mas:hover {
+    background-color: #1de9b633;
+    transform: translateY(-1px);
+  }
 </style>
+
+<script>
+  const btn = document.getElementById("btn-ver-mas");
+  const extra = document.getElementById("extra-members");
+
+  btn?.addEventListener("click", () => {
+    const expanded = btn.getAttribute("aria-expanded") === "true";
+    extra?.classList.toggle("visible", !expanded);
+    btn.setAttribute("aria-expanded", String(!expanded));
+    btn.textContent = expanded ? "Ver más" : "Ver menos";
+  });
+</script>
