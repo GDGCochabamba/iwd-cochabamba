@@ -1,6 +1,16 @@
 ---
 import { Image } from "astro:assets";
 import bannerTile from "../assets/images/banner.svg";
+
+interface Props {
+  tagline?: string;
+  registrationUrl?: string;
+}
+
+const { tagline, registrationUrl } = Astro.props;
+const finalTagline =
+  tagline ||
+  "Un día de charlas inspiradoras, talleres y oportunidades de networking mientras exploramos cómo redefinir lo que es posible en el mundo de la tecnología.";
 ---
 
 <section
@@ -11,36 +21,27 @@ import bannerTile from "../assets/images/banner.svg";
     <p
       class="textdetail mb-5 mt-5 flex-shrink-0 flex-grow-0 text-center text-[22px] text-[#4c555b]"
     >
-      Un día de charlas inspiradoras, talleres y oportunidades de networking
-      mientras exploramos cómo redefinir lo que es posible en el mundo de la
-      tecnología.
+      {finalTagline}
     </p>
   </div>
-  <div id="registerButtonContainer">
-    <a
-      href="https://events.gdg.com.bo/winay-tech-2025"
-      class="inline-block w-full rounded-lg bg-[#0f7c67] px-4 py-2 text-xl font-medium text-white lg:w-1/4"
-      target="_blank"
-      rel="noopener">Inscríbete aquí</a
-    >
-  </div>
+  {
+    registrationUrl && (
+      <div id="registerButtonContainer">
+        <a
+          href={registrationUrl}
+          class="inline-block w-full rounded-lg bg-[#0f7c67] px-4 py-2 text-xl font-medium text-white lg:w-1/4"
+          target="_blank"
+          rel="noopener"
+        >
+          Inscríbete aquí
+        </a>
+      </div>
+    )
+  }
 </section>
 
 <style>
   .textdetail {
     width: 50%;
   }
-
 </style>
-
-<script>
-  let registerButtonContainer = document.getElementById(
-    "registerButtonContainer",
-  );
-
-  let showRegisterButton = true;
-
-  if (!showRegisterButton && registerButtonContainer !== null) {
-    registerButtonContainer.style.display = "none";
-  }
-</script>

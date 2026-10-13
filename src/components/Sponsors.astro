@@ -1,75 +1,85 @@
 ---
-import { Image } from "astro:assets";
-import WTMLogo from "../assets/images/sponsors/wtmLogo.png";
-import GP4Tech from "../assets/images/community organizers/gp4tech.png";
-import FDSLogo from "../assets/images/sponsors/fdsLogo.webp";
-import MichiCosmicoLogo from "../assets/images/sponsors/michiCosmicoLogo.jpeg";
-import BeautyLogo from "../assets/images/sponsors/beautyLogo.jpeg";
+import type { PublicSponsor } from "../lib/event";
+
+interface Props {
+  sponsors: PublicSponsor[];
+}
+
+const { sponsors } = Astro.props;
+
+const TIER_ORDER: PublicSponsor["tier"][] = [
+  "platinum",
+  "gold",
+  "silver",
+  "bronze",
+  "community",
+  "media",
+];
+
+const grouped = TIER_ORDER.map((tier) => ({
+  tier,
+  items: sponsors.filter((s) => s.tier === tier),
+})).filter((g) => g.items.length > 0);
+
+const TIER_LABELS: Record<PublicSponsor["tier"], string> = {
+  platinum: "Platinum",
+  gold: "Gold",
+  silver: "Silver",
+  bronze: "Bronze",
+  community: "Community",
+  media: "Media",
+};
 ---
 
-<section class="px-6 py-20 pt-0 md:px-10">
-  <h2 class="flex-shrink-0 flex-grow-0 text-center text-[40px] mt-5 text-[#29292d]">
-    Nuestros Auspiciadores
-  </h2>
-  <p class="flex-shrink-0 flex-grow-0 text-center text-[22px] text-[#4c555b]">
-    Conoce a las empresas que apoyan el evento.
-  </p>
-  <div class="mt-14 flex items-center justify-center gap-48">
-    <a
-      href="https://www.facebook.com/GP4TechJala"
-      target="_blank"
-      rel="noopener"
-    >
-      <Image
-        src={GP4Tech}
-        alt="gp4tech logo"
-        loading="lazy"
-        class="m-auto mb-5 w-64"
-      />
-    </a>
-    <a
-      href="https://developers.google.com/womentechmakers"
-      target="_blank"
-      rel="noopener"
-    >
-      <Image
-        src={WTMLogo}
-        alt="WTM logo"
-        loading="lazy"
-        class="m-auto mb-5 w-64"
-      />
-    </a>
-    <a href="https://fundaciondelsaber.org/" target="_blank" rel="noopener">
-      <Image
-        src={FDSLogo}
-        alt="FSD logo"
-        loading="lazy"
-        class="m-auto mb-5 w-64"
-      />
-    </a>
-    <a
-      href="https://www.instagram.com/impresiones_michicosmico/#"
-      target="_blank"
-      rel="noopener"
-    >
-      <Image
-        src={MichiCosmicoLogo}
-        alt="MICHI COSMICO logo"
-        loading="lazy"
-        class="m-auto mb-5 w-64"
-      />
-    </a>
-    <a
-      href="https://www.facebook.com/thebeautytruckbolivia"
-      target="_blank"
-      rel="noopener"
-    >
-      <Image
-        src={BeautyLogo}
-        alt="Beauty logo"
-        loading="lazy"
-        class="m-auto mb-5 w-64"
-      />
-    </a>
-  </div>
-</section>
+{
+  sponsors.length > 0 && (
+    <section class="px-6 py-20 pt-0 md:px-10">
+      <h2 class="flex-shrink-0 flex-grow-0 text-center text-[40px] mt-5 text-[#29292d]">
+        Nuestros Auspiciadores
+      </h2>
+      <p class="flex-shrink-0 flex-grow-0 text-center text-[22px] text-[#4c555b]">
+        Conoce a las empresas que apoyan el evento.
+      </p>
+      <div class="mt-14 flex flex-col gap-12">
+        {grouped.map(({ tier, items }) => (
+          <div>
+            <h3 class="mb-6 text-center text-lg font-semibold uppercase tracking-wide text-[#4c555b]">
+              {TIER_LABELS[tier]}
+            </h3>
+            <div class="flex flex-wrap items-center justify-center gap-x-16 gap-y-8">
+              {items.map((s) =>
+                s.url ? (
+                  <a href={s.url} target="_blank" rel="noopener" title={s.name}>
+                    {s.logoUrl ? (
+                      <img
+                        src={s.logoUrl}
+                        alt={`${s.name} logo`}
+                        loading="lazy"
+                        class="m-auto h-20 w-auto max-w-[200px] object-contain"
+                      />
+                    ) : (
+                      <span class="text-xl font-semibold text-[#29292d]">
+                        {s.name}
+                      </span>
+                    )}
+                  </a>
+                ) : s.logoUrl ? (
+                  <img
+                    src={s.logoUrl}
+                    alt={`${s.name} logo`}
+                    loading="lazy"
+                    class="m-auto h-20 w-auto max-w-[200px] object-contain"
+                  />
+                ) : (
+                  <span class="text-xl font-semibold text-[#29292d]">
+                    {s.name}
+                  </span>
+                ),
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
