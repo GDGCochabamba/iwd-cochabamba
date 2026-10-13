@@ -26,6 +26,32 @@ const SOCIAL_ICONS = {
 } as const;
 
 type SocialKey = keyof typeof SOCIAL_ICONS;
+
+const AVATAR_COLORS = ["#4285f4", "#ea4335", "#f9ab00", "#34a853"];
+
+function initials(name: string): string {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0])
+    .join("")
+    .toUpperCase();
+}
+
+function colorFor(name: string): string {
+  let sum = 0;
+  for (const char of name) sum += char.charCodeAt(0);
+  return AVATAR_COLORS[sum % AVATAR_COLORS.length];
+}
+
+// Some bios continue with the talk abstract after a "**Talk title**" marker;
+// the card already shows the talk title, so keep only the person's bio.
+function shortBio(text: string | undefined): string {
+  if (!text) return "";
+  const beforeTalk = text.split("**")[0].trim();
+  return beforeTalk || text.replaceAll("**", "").trim();
+}
 ---
 
 {
@@ -34,54 +60,60 @@ type SocialKey = keyof typeof SOCIAL_ICONS;
       <h2 class="text-center text-3xl font-medium leading-normal text-[black]">
         Speakers
       </h2>
-      <div class="mt-16 grid grid-cols-1 gap-5 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-        {participants.map(({ participant, person }) => (
-          <div class="speaker-card rounded-md border-2 border-solid border-slate-200 p-3 pl-5">
-            <div class="flex flex-col items-center justify-between lg:flex-row lg:justify-around">
-              <div class="lg:w-1/3">
-                {person.photoUrl ? (
-                  <img
-                    src={person.photoUrl}
-                    alt={`${person.name} photo`}
-                    loading="lazy"
-                    class="h-52 w-52 rounded-2xl object-cover md:mr-3 md:h-44 md:w-44"
-                  />
-                ) : (
-                  <div class="m-auto grid h-52 w-52 place-items-center rounded-2xl bg-slate-200 text-4xl text-slate-500 md:h-44 md:w-44">
-                    {person.name.charAt(0)}
-                  </div>
-                )}
-              </div>
-              <div class="flex flex-col items-center justify-center lg:w-2/3">
-                <h5 class="mb-1 mt-2 text-center font-light lg:mt-0">
-                  {person.name}
-                </h5>
-                {participant.talkTitle && (
-                  <p class="mb-1 text-center text-sm font-medium text-[#0f7c67]">
-                    {participant.talkTitle}
-                  </p>
-                )}
-                <p class="mb-2 text-center text-xs font-thin text-black text-opacity-50 lg:mt-1 lg:text-sm">
-                  {participant.bioOverride ?? person.bio ?? ""}
-                </p>
-                <div class="flex items-center space-x-2">
-                  {(Object.entries(person.socials) as [SocialKey, string][]).map(
-                    ([kind, href]) =>
-                      href && SOCIAL_ICONS[kind] ? (
-                        <a href={href} target="_blank" rel="noopener">
-                          <Image
-                            class="h-5 w-5 lg:h-6 lg:w-6"
-                            src={SOCIAL_ICONS[kind]}
-                            alt={`${kind} link`}
-                          />
-                        </a>
-                      ) : null,
-                  )}
+      <div class="mx-auto mt-12 grid max-w-6xl grid-cols-2 gap-3 sm:grid-cols-[repeat(auto-fill,minmax(200px,1fr))] sm:gap-5">
+        {participants.map(({ participant, person }) => {
+          const bio = shortBio(participant.bioOverride ?? person.bio);
+          const socials = (
+            Object.entries(person.socials) as [SocialKey, string][]
+          ).filter(([kind, href]) => href && SOCIAL_ICONS[kind]);
+          return (
+            <article class="flex flex-col items-center gap-2 rounded-2xl border border-[#b9dccf] bg-white px-3 py-5 text-center sm:px-4 sm:py-6">
+              {person.photoUrl ? (
+                <img
+                  src={person.photoUrl}
+                  alt={person.name}
+                  loading="lazy"
+                  class="mb-1 h-[72px] w-[72px] rounded-full object-cover sm:h-24 sm:w-24"
+                />
+              ) : (
+                <div
+                  class="mb-1 flex h-[72px] w-[72px] items-center justify-center rounded-full text-xl font-bold text-white sm:h-24 sm:w-24 sm:text-[1.75rem]"
+                  style={`background-color: ${colorFor(person.name)}`}
+                  aria-hidden="true"
+                >
+                  {initials(person.name)}
                 </div>
-              </div>
-            </div>
-          </div>
-        ))}
+              )}
+              <h3 class="text-base font-semibold text-gray-900">
+                {person.name}
+              </h3>
+              {participant.talkTitle && (
+                <p class="text-sm font-medium leading-snug text-[#0f7c67]">
+                  {participant.talkTitle}
+                </p>
+              )}
+              {bio && (
+                <p class="line-clamp-3 text-xs leading-relaxed text-gray-500 sm:text-[0.8rem]">
+                  {bio}
+                </p>
+              )}
+              {socials.length > 0 && (
+                <div class="mt-auto flex items-center gap-2 pt-1">
+                  {socials.map(([kind, href]) => (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener"
+                      aria-label={`${person.name} en ${kind}`}
+                    >
+                      <Image class="h-5 w-5" src={SOCIAL_ICONS[kind]} alt="" />
+                    </a>
+                  ))}
+                </div>
+              )}
+            </article>
+          );
+        })}
       </div>
     </section>
   )
@@ -90,10 +122,5 @@ type SocialKey = keyof typeof SOCIAL_ICONS;
 <style>
   .speakers-section {
     background: #d1ece3;
-  }
-  .speaker-card {
-    border: 2px solid #8a8a8a;
-    border-bottom: 6px solid #8a8a8a;
-    background: white;
   }
 </style>
