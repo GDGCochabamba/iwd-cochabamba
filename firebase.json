@@ -1,26 +1,13 @@
 {
-  "hosting": [
-    {
-      "site": "winaytech",
-      "public": "dist",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ]
-    },
-    {
-      "site": "iwd-website",
-      "public": "hosting/iwd-redirect",
-      "redirects": [
-        {
-          "source": "/:path*",
-          "destination": "https://winaytech.gdg.com.bo/:path*",
-          "type": 302
-        }
-      ]
-    }
-  ]
+  "hosting": {
+    "site": "winaytech",
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
 }
