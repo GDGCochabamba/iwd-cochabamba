@@ -58,9 +58,12 @@ const getCategoryColor = (category: string) => {
           <div class="flex gap-4">
             <div class="h-28 w-28 flex-shrink-0 overflow-hidden rounded-lg bg-gradient-to-br from-gray-100 to-gray-200">
               {speaker.img && (
-                <img
+                <Image
                   src={speaker.img}
                   alt={speaker.name}
+                  width={112}
+                  height={112}
+                  densities={[1, 2]}
                   class="h-full w-full object-cover"
                 />
               )}
