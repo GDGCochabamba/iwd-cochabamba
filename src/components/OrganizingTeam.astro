@@ -64,11 +64,13 @@ const filterCategories = [
             data-name={member.name.toLowerCase()}
             data-roles={roleLabels.toLowerCase()}
           >
-            <img
+            <Image
               src={member.photo}
               alt={member.name}
+              width={72}
+              height={72}
+              densities={[1, 2]}
               class="card-photo"
-              loading="lazy"
             />
             <div class="card-info">
               <p class="card-name">{member.name}</p>

@@ -6,12 +6,20 @@ import logoTwitter from "../assets/images/social/twitter.svg";
 import logoGithub from "../assets/images/social/github.svg";
 import logoYoutube from "../assets/images/social/youtube.svg";
 
-const drivePhoto = (id: string) =>
-  `https://drive.google.com/thumbnail?id=${id}&sz=w300`;
+// Speaker photos live in src/assets/speakers/<slug>.jpg.
+const photos = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/speakers/*.jpg",
+  { eager: true },
+);
+const photo = (slug: string) => {
+  const file = photos[`../assets/speakers/${slug}.jpg`];
+  if (!file) throw new Error(`Missing photo src/assets/speakers/${slug}.jpg`);
+  return file.default;
+};
 
 export const speakers = [
   {
-    img: drivePhoto("1Yx1rZTK0d8TOrog4cyrQFZh4iPl0l6Zt"),
+    img: photo("maria-alejandra-mamani-cordero"),
     name: "Maria Alejandra Mamani Cordero",
     speakerTopic: "Enseñar a ser valientes, no perfectas",
     bio: "Especialista en educación y tecnología, actualmente cursando una maestría en Seguridad Informática e IA.",
@@ -25,7 +33,7 @@ export const speakers = [
     ],
   },
   {
-    img: drivePhoto("1oWlTHNKWUgiPWyzkB6-ZyLG3O5oW8man"),
+    img: photo("basilia-patzi-choqueticlla"),
     name: "Basilia Patzi Choqueticlla",
     speakerTopic: "Más allá del baile",
     bio: "Directora de Bhangare Dance Studio con 11 años de trayectoria formando bailarines en Cochabamba.",
@@ -39,7 +47,7 @@ export const speakers = [
     ],
   },
   {
-    img: drivePhoto("1udlzgIhnQaQ05rfdslCulORTgArxSyRw"),
+    img: photo("odaliz-nicol"),
     name: "Odaliz Nicol",
     speakerTopic:
       "¿Los limites mentales y fisicos realmente existen cuando se trata de crecer?",
@@ -54,7 +62,7 @@ export const speakers = [
     ],
   },
   {
-    img: drivePhoto("1ZATfcjQiaMSjZgo_tqaxG1_bOxzyhADk"),
+    img: photo("liliana-valentina-larrazabal"),
     name: "LILIANA VALENTINA LARRAZABAL",
     speakerTopic:
       "Romper patrones invisibles: salud mental y liderazgo femenino en tecnología",
@@ -69,7 +77,7 @@ export const speakers = [
     ],
   },
   {
-    img: drivePhoto("12uD-hIRGaVaSiju_dB6IU1c9imtPqylb"),
+    img: photo("raquel-andrea-calderon-gallardo"),
     name: "Raquel Andrea Calderón Gallardo",
     speakerTopic: "Crónicas de un Salto al Vacío",
     bio: "Ingeniera biomédica apasionada por la IA aplicada a la salud y neurotecnología.",
@@ -83,7 +91,7 @@ export const speakers = [
     ],
   },
   {
-    img: drivePhoto("1PWdiymDgCB6HgAjBDjkTzXulpdn6fRhe"),
+    img: photo("diandra-nathaly-cespedes-sagardia"),
     name: "Diandra Nathaly Céspedes Sagardía",
     speakerTopic:
       "Violencia digital de género: una realidad pendiente de abordar",
@@ -95,7 +103,7 @@ export const speakers = [
     ],
   },
   {
-    img: drivePhoto("18fSUA6tLk2cYLZUA7p_e1cDyR_gBK-Tp"),
+    img: photo("gaston-joshua-zientarski-rivero"),
     name: "Gaston Joshua Zientarski Rivero",
     speakerTopic: "Inteligencia emocional para equipos de trabajo",
     bio: "Licenciado en Ciencias Jurídicas y activista en la construcción de espacios juveniles e incidencia pública.",
@@ -109,7 +117,7 @@ export const speakers = [
     ],
   },
   {
-    img: drivePhoto("1dzIzQCcemMQY3mVsffCSqY4t-LVRUeq8"),
+    img: photo("nicole-cartagena-siles"),
     name: "Nicole Cartagena Siles",
     speakerTopic:
       "Tu carrera no es una caja: crecer profesionalmente en un área sin muchos referentes",
@@ -124,7 +132,7 @@ export const speakers = [
     ],
   },
   {
-    img: drivePhoto("1cJTStmrdr9wB6NELVbPY3-sis7SBvkQe"),
+    img: photo("dafne-alejandra-caballero"),
     name: "Dafne Alejandra Caballero",
     speakerTopic:
       "Cómo la inteligencia artificial potencia las campañas de pago",
@@ -139,7 +147,7 @@ export const speakers = [
     ],
   },
   {
-    img: drivePhoto("1q0dS7_BygNzRzmPLefuJwewWuDbrb_0l"),
+    img: photo("maria-rene-torrez-vargas"),
     name: "María René Torrez Vargas",
     speakerTopic: "Technovation: 10 años rompiendo paradigmas.",
     bio: "Ingeniera de Sistemas, WTM Ambassador y Trainer de Cisco apasionada por la robótica educativa.",
@@ -150,7 +158,7 @@ export const speakers = [
     ],
   },
   {
-    img: drivePhoto("1g8_p58fdNXzYWIfNWdEhisU_KXhyjQhg"),
+    img: photo("carlos-collazos"),
     name: "Carlos Collazos",
     speakerTopic:
       "Trabajar remoto desde Bolivia para equipos internacionales suena increible",
@@ -162,7 +170,7 @@ export const speakers = [
     ],
   },
   {
-    img: drivePhoto("1Crm9Xd3V3OYsMDkSEXAqIk7I6HR7460q"),
+    img: photo("anahi-sanabria-ugarte"),
     name: "Anahí Sanabria Ugarte",
     speakerTopic: "La programación competitiva puede cambiar tu carrera",
     bio: "Backend Developer y competidora ICPC apasionada por la resolución de problemas algorítmicos.",

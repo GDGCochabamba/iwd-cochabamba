@@ -64,11 +64,13 @@ import { coreTeamMembers } from "../data/teamMembers.ts";
         <div class="team-grid">
           {coreTeamMembers.slice(0, 4).map((member) => (
             <div class="team-member">
-              <img
+              <Image
                 src={member.photo}
                 alt={member.name}
+                width={80}
+                height={80}
+                densities={[1, 2]}
                 class="member-photo"
-                loading="lazy"
               />
               <span class="member-name">{member.name}</span>
             </div>
@@ -77,11 +79,13 @@ import { coreTeamMembers } from "../data/teamMembers.ts";
         <div class="team-grid team-grid-extra" id="extra-members">
           {coreTeamMembers.slice(4).map((member) => (
             <div class="team-member">
-              <img
+              <Image
                 src={member.photo}
                 alt={member.name}
+                width={80}
+                height={80}
+                densities={[1, 2]}
                 class="member-photo"
-                loading="lazy"
               />
               <span class="member-name">{member.name}</span>
             </div>
